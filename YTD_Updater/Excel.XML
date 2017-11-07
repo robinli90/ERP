@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Excel</name>
+    </assembly>
+    <members>
+        <member name="T:Excel.Cell">
+            <summary>
+            (c) 2014 Vienna, Dietmar Schoder
+            
+            Code Project Open License (CPOL) 1.02
+            
+            Deals with an Excel cell
+            </summary>
+        </member>
+        <member name="F:Excel.Cell.ColumnIndex">
+            <summary>
+            Index of the orignal Excel cell column starting at 0
+            </summary>
+        </member>
+        <member name="F:Excel.Cell.Text">
+            <summary>
+            Text of the Excel cell (if it was a string)
+            </summary>
+        </member>
+        <member name="P:Excel.Cell.CellReference">
+            <summary>
+            Used for converting from Excel column/row to column index starting at 0
+            </summary>
+        </member>
+        <member name="P:Excel.Cell.Value">
+            <summary>
+            Original value of the Excel cell
+            </summary>
+        </member>
+        <member name="T:Excel.Row">
+            <summary>
+            (c) 2014 Vienna, Dietmar Schoder
+            
+            Code Project Open License (CPOL) 1.02
+            
+            Deals with an Excel row
+            </summary>
+        </member>
+        <member name="T:Excel.sst">
+            <summary>
+            (c) 2014 Vienna, Dietmar Schoder
+            
+            Code Project Open License (CPOL) 1.02
+            
+            Handles a "shared strings XML-file" in an Excel xlsx-file
+            </summary>
+        </member>
+        <member name="T:Excel.Workbook">
+            <summary>
+            (c) 2014 Vienna, Dietmar Schoder
+            
+            Code Project Open License (CPOL) 1.02
+            
+            Deals with an Excel workbook in an xlsx-file and provides all worksheets in it
+            </summary>
+        </member>
+        <member name="M:Excel.Workbook.Worksheets(System.String)">
+            <summary>
+            All worksheets in the Excel workbook deserialized
+            </summary>
+            <param name="ExcelFileName">Full path and filename of the Excel xlsx-file</param>
+            <returns></returns>
+        </member>
+        <member name="M:Excel.Workbook.DateFromExcelFormat(System.String)">
+            <summary>
+            Method converting an Excel cell value to a date
+            </summary>
+            <param name="ExcelCellValue"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Excel.worksheet">
+            <summary>
+            (c) 2014 Vienna, Dietmar Schoder
+            
+            Code Project Open License (CPOL) 1.02
+            
+            Deals with an Excel worksheet in an xlsx-file
+            </summary>
+        </member>
+    </members>
+</doc>

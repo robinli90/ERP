@@ -1,0 +1,124 @@
+/* 
+
+HDR Record Type                                                   
+===============
+Record Description               Length  IDX    Comment                              
+"HDR"                               3      0    Alphanumeric                         
+Reporting Date (MMDDYY)             6.0    3    Numeric                              
+Shift          (1,2,3)              1      9    Alphanumeric                         
+Fiscal Period                       4.0   10    Numeric                              
+Shift Group                         1     14    Alphanumeric, Optional               
+Finished Good Stock Location        3     15    Alphanumeric, Optional               
+Reporting Plant                     3     18    Alphanumeric, Optional               
+               Length                     21
+
+DTL Record Type 
+=================
+Record Description               Length  IDX    Comment                        
+"DTL"                               3      0    Alphanumeric                   
+Mode (S-Setup,R-Run,D-Downtime)     1      3    Alphanumeric                   
+Department                          2      4    Alphanumeric                   
+Resource                            5      6    Alphanumeric                   
+Part# (Family or Actual Part#)     20     11    Alphanumeric, Optional with WO#
+Sequence#                           3.0   31    Numeric                        
+Indirect Code (Mode - D only)      10     34    Alphanumeric                   
+Total Machine Time (HHMM)           4.0   44    Numeric                        
+Work Order#                        10     48    Alphanumeric, Optional         
+# of Men                            1.0   58    Numeric, Optional              
+# of Machines                       1.0   59    Numeric, Optional              
+Reversing (Y)                       1     60    Alphanumeric, Optional         
+Use 2 Digits for # of Men/Mach (Y)  1     61    Alphanumeric, Optional         
+# of Men                            2.0   62    Numeric, Optional              
+# of Machines                       2.0   64    Numeric, Optional              
+               Length                     66
+                                                                               
+       
+       
+ PRT Record Type                                                         
+====================       
+ Record Description              Length  IDX     Comment                          
+ "PRT"                              3      0     Alphanumeric                     
+ Part#                             20      3     Alphanumeric, Optional with WO#  
+ Quantity Good                     15.5   23     Numeric                          
+ Quantity Scrap                    15.5   38     Numeric                          
+ Units                              3     53     Alphanumeric                     
+ Scrap Reason                       2     56     Alphanumeric                     
+ Employee Department                2     58     Alphanumeric                     
+ Employee #                         5     60     Alphanumeric                     
+ Charge Department                  2     65     Alphanumeric, Optional           
+ Charge Resource                    5     67     Alphanumeric, Optional           
+ Reversing (Y)                      1     72     Alphanumeric, Optional           
+ Lot#                              15     73     Alphanumeric, Optional           
+ Stamp Lot# on Quantity Scrap (Y)   1     88     Alphanumeric, Optional           
+ Create Serial (Y-Yes,H-Yes+Hold)   1     89     Alphanumeric, Optional           
+ Output Queue Library              10     90     Alphanumeric, Optional           
+ Output Queue Name                 10    100     Alphanumeric, Optional           
+ User-Enter Field 1                20    110     Alphanumeric, Optional           
+ User-Enter Field 2                20    130     Alphanumeric, Optional 
+ User-Enter Field 3                20    150     Alphanumeric, Optional 
+ Voiding Serial                    11.0  170     Numeric, Optional      
+ Product Serial Number             30    181     Alphanumeric, Optional 
+ No Backflush (Y)                   1    211     Alphanumeric, Optional 
+ Scan ID                           40    212     Alphanumeric, Optional 
+               Length                    252
+                                                                        
+       
+       
+MAT Record Type                                                          
+=================
+Record Description               Length  IDX    Comment                              
+"MAT"                               3      0    Alphanumeric                         
+Material Part#                     20      3    Alphanumeric                         
+Stockroom                           3     23    Alphanumeric (same plant as DTL resc)
+R=Required, B=By-Product            1     26    Alphanumeric                         
+Backflush (Y=Yes, N=No)             1     27    Alphanumeric                         
+Quantity                           15.5   28    Numericmeric                         
+Units                               3     43    Alphanumeric, Optional               
+Transaction Date (MMDDYY)           6.0   46    Numeric, Optional                    
+Sequence#                           3.0   52    Numeric, Optional                    
+Lot#                               15     55    Alphanumeric, Optional               
+Serial#                            11.0   70    Numeric, Optional                    
+Material for scrap Prod. (Y)        1     81    Alphanumeric, Optional               
+               Length                     82
+                                                                                     
+
+
+LAB Record Type     
+====================
+Record Description               Length  IDX    Comment                    
+"LAB"                               3      0    Alphanumeric               
+Employee Department                 2      3    Alphanumeric               
+Employee #                          5      5    Alphanumeric               
+Total Time (HHMM)                   4.0   10    Numeric                    
+Indirect Labour Code               10     14    Alphanumeric, Optional     
+Reversing (Y)                       1     24    Alphanumeric, Optional     
+Rate Factor                         3.2   25    Numeric, Optional          
+               Length                     28
+                                                                    
+                                                                    
+
+ NOTES                                                             
+  1) Do not include " around HDR,DTL,PRT or LAB in the PC file.                 
+  2) Numeric fields MUST NOT contain blanks (use 0's to pad).                   
+  3) Numeric fields requiring decimal places should not include decimal point.  
+  4) If the reporting plant is defined in "HDR" record, the reporting batch is  
+     created in this plant instead of the selected plant in previous screen.    
+  5) "LAB" and "PRT" records will be associated with the previous "DTL" entry   
+     unless it is indirect or downtime.                                         
+  6) Repeat "LAB" and "PRT" records after each "DTL" as required (e.g. multipl  
+     scrap reasons or a crew of employees).                                     
+  7) "MAT" records (as required) must be following "PRT" records.               
+  8) Material for scrap production is an opionally required field.  If it is    
+     set to 'Y', the material usage is for scrap production.  By default, the   
+     field is blank and the material usage is assumed for good production.      
+  9) Do not include Production Serial Number and Scan ID together in a "PRT"    
+     record.                                                                    
+ 10) Production Serial Number and Scan ID if provided refers to good production 
+     quantity and create serial is 'Y' or 'H' only.                             
+     
+
+A HDR record is required for each batch that is to be created. Thus there is one
+HDR per resource. This means that the job data has to be grouped by resource.       
+
+                                                                                
+*/

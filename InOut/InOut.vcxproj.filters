@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d2da4ccf-32bb-4480-9c39-660870f34374}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{c10d568e-5428-4d72-a10a-5fb93e1ac0cf}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{780680d8-b06e-47bd-a275-e05919f03fbb}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Bitmaps">
+      <UniqueIdentifier>{fdc43e00-476c-42d1-9c32-f2a8af4c4ab2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Configuration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dbfuncs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrorDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InOut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InOutDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mscomm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="msgQThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="taskLogic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskTypeDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Trace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sqlQuery.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Configuration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Disable4786.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InOut.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InOutDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mscomm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskTypeDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Trace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CTrapCREdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fesqldata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SerListDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\bitmap1.bmp">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\bmp00001.bmp">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\bmp00002.bmp">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\InOut.ico">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\InOut.rc2">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="inout.cfg" />
+    <CustomBuild Include="ReadMe.txt" />
+    <CustomBuild Include="tasks.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CMScfg.INI" />
+    <None Include="msado15.dll" />
+    <None Include="InOut.clw" />
+    <None Include="InOutHelp.doc" />
+    <None Include="notedefs.txt" />
+    <None Include="res\in.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\out.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\blank.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Bitmaps\correction_32.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+    <None Include="Bitmaps\error.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+    <None Include="Bitmaps\error_32.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+    <None Include="Bitmaps\garbage.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+    <None Include="Bitmaps\garbage_32.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+    <None Include="Bitmaps\idea.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+    <None Include="Bitmaps\idea_32.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+    <None Include="Bitmaps\other_32.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+    <None Include="Bitmaps\person_32.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+    <None Include="Bitmaps\praise.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+    <None Include="Bitmaps\praise_32.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+    <None Include="Bitmaps\question.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+    <None Include="Bitmaps\question_32.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+    <None Include="Bitmaps\skullx_32.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+    <None Include="Bitmaps\thumbsup.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+    <None Include="Bitmaps\thumbsup_32.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+    <None Include="Bitmaps\user.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+    <None Include="Bitmaps\user_32.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+    <None Include="Bitmaps\warning.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+    <None Include="Bitmaps\warning_32.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+    <None Include="Bitmaps\blank.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+    <None Include="Bitmaps\comment.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+    <None Include="Bitmaps\comment_32.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+    <None Include="Bitmaps\correction.bmp">
+      <Filter>Bitmaps</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="InOut.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

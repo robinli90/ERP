@@ -1,0 +1,358 @@
+OPCODE Table dump
+
+Ordered by Description
+
+AS 	ASSEMBLY                      	                              	                              	                              	2007-10-16	0.00	                	002	
+FT 	AT FIT                        	                              	                              	                              	2007-10-16	0.00	                	002	
+MY 	AT MACHINE CENTRE - KEYWAY    	                              	                              	                              	2007-10-16	0.00	                	002	
+MS 	AT MACHINE CENTRE - SKIM      	                              	                              	                              	2007-10-16	0.00	                	002	
+LA 	AT NC LATHE                   	                              	                              	                              	2007-10-16	0.00	                	002	
+PH 	AT POLISH                     	                              	                              	                              	2007-10-16	0.00	                	002	
+EH 	AT SPARK EDM                  	                              	                              	                              	2007-10-16	0.00	                	002	
+EF 	AT SPARK EDM - FEEDS          	                              	                              	                              	2007-10-16	0.00	                	002	
+Z1 	AT ZPS 1                      	                              	                              	                              	2007-10-16	0.00	                	002	
+BFM	BACK FEEDER MILLING           	                              	                              	                              	2008-04-14	0.00	                	001	
+BMH	BACK MILLING POST H/T         	                              	                              	                              	2008-04-14	0.00	                	001	
+BB 	BACKER BACK MILLING           	                              	                              	                              	2007-10-16	0.00	                	003	
+BF 	BACKER FRONT MILLING          	                              	                              	                              	2007-10-16	0.00	                	003	
+BM 	BACKER MILLING - CNC          	                              	                              	                              	2007-11-08	0.00	                	001	
+OB 	BOLSTER BACK MILLING          	                              	                              	                              	2007-10-16	0.00	                	003	
+OF 	BOLSTER FRONT MILLING         	                              	                              	                              	2007-10-16	0.00	                	003	
+CO 	CAM COMPLETE                  	                              	                              	                              	2007-10-16	0.00	                	002	
+CI 	CAM START                     	                              	                              	                              	2007-10-16	0.00	                	002	
+CW 	CAM WAIT                      	                              	                              	                              	2007-10-16	0.00	                	002	
+EL 	CARBON ELECTRODE              	                              	                              	                              	2007-10-16	0.00	                	002	
+NCE	CNC MILL ELECTRODES           	                              	                              	                              	2007-10-16	0.00	                	003	
+CM 	CNC MILLING                   	                              	                              	                              	2007-11-08	0.00	                	001	
+CP 	CONTROL POCKET MILLING - CNC  	                              	                              	                              	2007-11-08	0.00	                	001	
+CRM	CORE MILLING                  	                              	                              	                              	2008-03-13	0.00	                	001	
+CRM	CORE MILLING                  	                              	                              	                              	2008-03-13	0.00	                	002	
+CRM	CORE MILLING                  	                              	                              	                              	2008-03-13	0.00	                	003	
+CP 	CUT PADS                      	                              	                              	                              	2008-08-13	0.00	                	003	
+CAD	DESIGN                        	                              	                              	                              	2007-10-02	0.00	                	001	
+CAD	DESIGN                        	                              	                              	                              	2007-10-16	0.00	                	003	
+DD 	DESIGN COMPLETE               	                              	                              	                              	2007-10-16	0.00	                	002	
+DI 	DESIGN START                  	                              	                              	                              	2007-10-16	0.00	                	002	
+DW 	DESIGN WAIT                   	                              	                              	                              	2007-10-16	0.00	                	002	
+DR 	DRAMET                        	                              	                              	                              	2007-10-15	0.00	                	001	
+HT1	DRAW 1                        	                              	                              	                              	2008-04-15	0.00	                	001	
+HT2	DRAW 2                        	                              	                              	                              	2008-04-15	0.00	                	001	
+DS 	DRILL & LIFT HOLES            	                              	                              	                              	2008-03-20	0.00	                	003	
+DRR	DRILL & REAM                  	                              	                              	                              	2007-10-16	0.00	                	003	
+DS 	DRILL AND STAMP               	                              	                              	                              	2007-10-02	0.00	                	001	
+DS 	DRILL AND TAP                 	                              	                              	                              	2007-10-16	0.00	                	002	
+DU 	DUMORE                        	                              	                              	                              	2007-10-16	0.00	                	002	
+EDM	EDM SINKER  - SHAPE PROFILE   	                              	                              	                              	2007-10-02	0.00	                	001	
+BRG	EDM SINKER - BEARINGS         	                              	                              	                              	2007-10-16	0.00	                	003	
+BLT	EDM SINKER - BOLTS            	                              	                              	                              	2007-10-16	0.00	                	003	
+EDM	EDM SINKER - SHAPE PROFILE    	                              	                              	                              	2007-10-16	0.00	                	003	
+TUN	EDM SINKER - TUNNEL           	                              	                              	                              	2007-10-16	0.00	                	003	
+EN 	ENGRAVE                       	                              	                              	                              	2007-10-16	0.00	                	002	
+FB 	FEEDER BACK MILLING           	                              	                              	                              	2007-10-16	0.00	                	003	
+FF 	FEEDER FRONT MILLING          	                              	                              	                              	2007-10-16	0.00	                	003	
+FN 	FINISH TURN AFTER H.T.        	                              	                              	                              	2007-10-16	0.00	                	002	
+FD 	FIT COMPLETE                  	                              	                              	                              	2007-10-16	0.00	                	002	
+FS 	FIT START                     	                              	                              	                              	2007-10-16	0.00	                	002	
+FC 	FLAME CUT                     	                              	                              	                              	2007-10-02	0.00	                	001	
+FC 	FLAME CUT                     	                              	                              	                              	2007-10-16	0.00	                	003	
+FL 	FLAME CUTTER                  	                              	                              	                              	2007-10-16	0.00	                	002	
+FFM	FRONT FEEDER MILLING          	                              	                              	                              	2008-04-14	0.00	                	001	
+GR 	GRIND & SIZE                  	                              	                              	                              	2007-10-16	0.00	                	003	
+GR 	GRIND TO SIZE                 	                              	                              	                              	2007-11-08	0.00	                	001	
+GR 	GRINDER                       	                              	                              	                              	2007-10-16	0.00	                	002	
+DU 	HAND GRINDING                 	                              	                              	                              	2007-10-02	0.00	                	001	
+DU 	HAND GRINDING                 	                              	                              	                              	2007-10-16	0.00	                	003	
+HT 	HARDEN                        	                              	                              	                              	2007-10-16	0.00	                	003	
+HT 	HARDEN                        	                              	                              	                              	2008-04-15	0.00	                	001	
+HT3	HARDEN - DRAW 3               	                              	                              	                              	2008-03-13	0.00	                	001	
+D1 	HARDEN - 1ST DRAW             	                              	                              	                              	2008-03-13	0.00	                	002	
+D2 	HARDEN - 2ND DRAW             	                              	                              	                              	2008-03-13	0.00	                	002	
+D3 	HARDEN - 3RD DRAW             	                              	                              	                              	2008-03-13	0.00	                	002	
+HD 	HARDENING                     	                              	                              	                              	2007-10-16	0.00	                	002	
+HT 	HEAT TREAT                    	                              	                              	                              	2007-10-16	0.00	                	002	
+HC 	HEAT TREAT CLEAR              	                              	                              	                              	2007-10-16	0.00	                	003	
+TI 	IN TOOL ROOM                  	                              	                              	                              	2007-10-16	0.00	                	002	
+IN 	INSPECTION                    	                              	                              	                              	2007-10-16	0.00	                	002	
+KEY	KEYWAY MILLING                	                              	                              	                              	2007-10-16	0.00	                	003	
+MCB	MACHINE CENTER - BACK         	                              	                              	                              	2008-07-04	0.00	                	002	
+MCF	MACHINE CENTER - FRONT        	                              	                              	                              	2008-07-04	0.00	                	002	
+MCK	MACHINE CENTER - KEYWAY       	                              	                              	                              	2008-07-04	0.00	                	002	
+NC 	MACHINE CENTRE ( PROGRAM READ)	                              	                              	                              	2007-10-16	0.00	                	002	
+MI 	MACHINE CENTRE - SIZING       	                              	                              	                              	2007-10-16	0.00	                	002	
+MD 	MACHINE CENTRE COMPLETE       	                              	                              	                              	2007-10-16	0.00	                	002	
+REM	MACHINE TO SIZE - FACE MILL   	                              	                              	                              	2007-11-08	0.00	                	001	
+ME 	MAKE ELECTRODE                	                              	                              	                              	2008-03-13	0.00	                	003	
+ME 	MAKE ELECTRODE                	                              	                              	                              	2008-03-13	0.00	                	002	
+ME 	MAKE ELECTRODE                	                              	                              	                              	2008-03-13	0.00	                	001	
+MB 	MANDREL BACK MILLING          	                              	                              	                              	2007-10-16	0.00	                	003	
+MB 	MANDREL BACK MILLING          	                              	                              	                              	2007-11-08	0.00	                	001	
+MF 	MANDREL FRONT MILLING         	                              	                              	                              	2007-10-16	0.00	                	003	
+MF 	MANDREL FRONT MILLING         	                              	                              	                              	2007-11-08	0.00	                	001	
+ML 	MANUAL LATHE                  	                              	                              	                              	2007-10-16	0.00	                	002	
+LM 	MANUAL LATHE                  	                              	                              	                              	2008-08-18	0.00	                	003	
+SK 	MANUAL LATHE - SKIM           	                              	                              	                              	2007-10-16	0.00	                	002	
+MM 	MANUAL MILLING                	                              	                              	                              	2007-11-08	0.00	                	001	
+MM 	MANUAL MILLING                	                              	                              	                              	2008-08-13	0.00	                	003	
+AM 	MATSUURA MACHINE CENTRE DEPT  	                              	                              	                              	2007-10-16	0.00	                	002	
+NS 	NC LATHE SKIM (ZPS)           	                              	                              	                              	2007-10-16	0.00	                	002	
+NI 	NITRIDE                       	                              	                              	                              	2007-10-16	0.00	                	002	
+NI 	NITRIDE                       	                              	                              	                              	2007-10-16	0.00	                	003	
+NI 	NITRIDE                       	                              	                              	                              	2007-11-08	0.00	                	001	
+LD 	OFF NC LATHE                  	                              	                              	                              	2007-10-16	0.00	                	002	
+ED 	OFF SPARK EDM                 	                              	                              	                              	2007-10-16	0.00	                	002	
+WO 	OFF WIRE MACHINE              	                              	                              	                              	2007-10-16	0.00	                	002	
+OH 	ON HOLD                       	                              	                              	                              	2007-10-16	0.00	                	002	
+OM 	ON MACHINE CENTRE             	                              	                              	                              	2007-10-16	0.00	                	002	
+LS 	ON NC LATHE                   	                              	                              	                              	2007-10-16	0.00	                	002	
+ES 	ON SPARK EDM                  	                              	                              	                              	2007-10-16	0.00	                	002	
+WE 	ON WIRE MACHINE               	                              	                              	                              	2007-10-16	0.00	                	002	
+HO 	OUTSIDE HEAT TREAT            	                              	                              	                              	2007-10-16	0.00	                	002	
+PI 	PIN                           	                              	                              	                              	2007-10-16	0.00	                	002	
+PN 	PIN OUT                       	                              	                              	                              	2007-10-16	0.00	                	003	
+PN 	PIN OUT                       	                              	                              	                              	2008-04-15	0.00	                	001	
+PBB	PLATE BACK BURN               	                              	                              	                              	2007-11-05	0.00	                	001	
+PB 	PLATE BACK MILLING            	                              	                              	                              	2007-10-02	0.00	                	001	
+PB 	PLATE BACK MILLING            	                              	                              	                              	2007-10-16	0.00	                	003	
+PF 	PLATE FRONT MILLING           	                              	                              	                              	2007-10-02	0.00	                	001	
+PF 	PLATE FRONT MILLING           	                              	                              	                              	2007-10-16	0.00	                	003	
+PM 	POCKET MILLING POST H/T       	                              	                              	                              	2008-04-14	0.00	                	001	
+PD 	POLISH COMPLETE               	                              	                              	                              	2007-10-16	0.00	                	002	
+PO 	POLISH START                  	                              	                              	                              	2007-10-16	0.00	                	002	
+PS 	POLISH STOP                   	                              	                              	                              	2007-10-16	0.00	                	002	
+INS	POLISH, ASSEMBLE & INSPECT    	                              	                              	                              	2007-10-16	0.00	                	003	
+INS	POLISH, ASSEMBLE AND INSPECT  	                              	                              	                              	2007-10-02	0.00	                	001	
+HP 	PRE HEAT                      	                              	                              	                              	2008-05-26	0.00	                	001	
+HP 	PRE-HEAT                      	                              	                              	                              	2008-07-04	0.00	                	002	
+HN 	PRE-HEAT TREAT INSPECTION     	                              	                              	                              	2007-10-16	0.00	                	003	
+CAM	PROGRAMMING                   	                              	                              	                              	2007-10-02	0.00	                	001	
+CAM	PROGRAMMING                   	                              	                              	                              	2007-10-16	0.00	                	003	
+HC 	RACK CLEAR                    	                              	                              	                              	2007-10-16	0.00	                	002	
+RE 	RE-ENGRAVE                    	                              	                              	                              	2008-07-04	0.00	                	002	
+RH 	RELEASED                      	                              	                              	                              	2007-10-16	0.00	                	002	
+RM 	REMACHINE - MILLING           	                              	                              	                              	2008-04-22	0.00	                	001	
+RE 	REMACHINE-LATHE               	                              	                              	                              	2007-11-08	0.00	                	001	
+RPR	REPAIR - WELD & MILL          	                              	                              	                              	2007-10-16	0.00	                	003	
+RWK	REWORK - MILLING              	                              	                              	                              	2007-10-16	0.00	                	003	
+SB 	SANDBLAST                     	                              	                              	                              	2008-07-04	0.00	                	002	
+SB 	SANDBLASTING                  	                              	                              	                              	2007-10-02	0.00	                	001	
+SAW	SAW                           	                              	                              	                              	2008-07-04	0.00	                	002	
+SAW	SAW CUTTING                   	                              	                              	                              	2007-10-16	0.00	                	003	
+SWE	SAW ELECTRODES                	                              	                              	                              	2007-10-16	0.00	                	003	
+SAW	SAWCUTTING                    	                              	                              	                              	2007-10-02	0.00	                	001	
+SC 	SCRAP                         	                              	                              	                              	2007-10-16	0.00	                	002	
+SHP	SHAPE INPUT                   	                              	                              	                              	2007-10-02	0.00	                	001	
+SI 	SHAPE INPUT                   	                              	                              	                              	2008-03-20	0.00	                	003	
+SM 	SHAPE MILLING                 	                              	                              	                              	2008-03-13	0.00	                	001	
+SM 	SHAPE MILLING                 	                              	                              	                              	2008-03-13	0.00	                	002	
+SM 	SHAPE MILLING                 	                              	                              	                              	2008-03-13	0.00	                	003	
+SBM	SPARK BACK MILLING            	                              	                              	                              	2008-04-14	0.00	                	001	
+SF 	SPARK FEED HOLE               	                              	                              	                              	2007-11-08	0.00	                	001	
+TB 	TAPER BACK MILLING            	                              	                              	                              	2008-08-13	0.00	                	003	
+TF 	TO FLAME CUTTER               	                              	                              	                              	2007-10-16	0.00	                	002	
+TH 	TO HEAT TREAT                 	                              	                              	                              	2007-10-16	0.00	                	002	
+MM 	TOOL ROOM                     	                              	                              	                              	2007-10-16	0.00	                	002	
+KY 	TOOL ROOM - KEYWAY            	                              	                              	                              	2007-10-16	0.00	                	002	
+TD 	TOOL ROOM COMPLETE            	                              	                              	                              	2007-10-16	0.00	                	002	
+TS 	TOOL ROOM START               	                              	                              	                              	2007-10-16	0.00	                	002	
+TZ 	TOOL ROOM STOP                	                              	                              	                              	2007-10-16	0.00	                	002	
+AT 	TOSHIBA MACHINE CENTRE DEPT   	                              	                              	                              	2007-10-16	0.00	                	002	
+TG 	TURN FLANGE                   	                              	                              	                              	2007-10-16	0.00	                	002	
+TT 	TURN TAPER                    	                              	                              	                              	2007-10-16	0.00	                	002	
+TUR	TURNING                       	                              	                              	                              	2007-10-02	0.00	                	001	
+TUR	TURNING                       	                              	                              	                              	2007-10-16	0.00	                	003	
+WC 	WELD COMPLETE                 	                              	                              	                              	2007-10-16	0.00	                	002	
+WS 	WELD IN                       	                              	                              	                              	2007-10-16	0.00	                	002	
+WD 	WELDING                       	                              	                              	                              	2007-10-02	0.00	                	001	
+WD 	WELDING                       	                              	                              	                              	2008-03-13	0.00	                	003	
+CH 	WIRE CHOKE                    	                              	                              	                              	2007-10-16	0.00	                	003	
+WIR	WIRE CUT SHAPE PROFILE        	                              	                              	                              	2007-10-02	0.00	                	001	
+WIR	WIRE CUT SHAPE PROFILE        	                              	                              	                              	2007-10-16	0.00	                	003	
+AW 	WIRE DEPARTMENT               	                              	                              	                              	2007-10-16	0.00	                	002	
+RF 	WIRE EDM RELIEF               	                              	                              	                              	2007-10-16	0.00	                	002	
+GA 	WIRE GAUGE                    	                              	                              	                              	2007-10-16	0.00	                	003	
+RF 	WIRE RELIEF                   	                              	                              	                              	2007-10-16	0.00	                	003	
+ZS 	ZPS-SIZING                    	                              	                              	                              	2008-07-04	0.00	                	002	
+ZK 	ZPS-SKIM                      	                              	                              	                              	2008-07-04	0.00	                	002	
+D1 	1ST DRAW HEAT TREAT           	                              	                              	                              	2007-10-16	0.00	                	003	
+D2 	2ND DRAW HEAT TREAT           	                              	                              	                              	2007-10-16	0.00	                	003	
+D3 	3RD DRAW HEAT TREAT           	                              	                              	                              	2007-10-16	0.00	                	003	
+
+
+
+SAME DATA ORDER BY THE TASKCODE 
+
+AM 	MATSUURA MACHINE CENTRE DEPT  	                              	                              	                              	2007-10-16	0.00	                	002	
+AS 	ASSEMBLY                      	                              	                              	                              	2007-10-16	0.00	                	002	
+AT 	TOSHIBA MACHINE CENTRE DEPT   	                              	                              	                              	2007-10-16	0.00	                	002	
+AW 	WIRE DEPARTMENT               	                              	                              	                              	2007-10-16	0.00	                	002	
+BB 	BACKER BACK MILLING           	                              	                              	                              	2007-10-16	0.00	                	003	
+BF 	BACKER FRONT MILLING          	                              	                              	                              	2007-10-16	0.00	                	003	
+BFM	BACK FEEDER MILLING           	                              	                              	                              	2008-04-14	0.00	                	001	
+BLT	EDM SINKER - BOLTS            	                              	                              	                              	2007-10-16	0.00	                	003	
+BM 	BACKER MILLING - CNC          	                              	                              	                              	2007-11-08	0.00	                	001	
+BMH	BACK MILLING POST H/T         	                              	                              	                              	2008-04-14	0.00	                	001	
+BRG	EDM SINKER - BEARINGS         	                              	                              	                              	2007-10-16	0.00	                	003	
+CAD	DESIGN                        	                              	                              	                              	2007-10-02	0.00	                	001	
+CAD	DESIGN                        	                              	                              	                              	2007-10-16	0.00	                	003	
+CAM	PROGRAMMING                   	                              	                              	                              	2007-10-02	0.00	                	001	
+CAM	PROGRAMMING                   	                              	                              	                              	2007-10-16	0.00	                	003	
+CH 	WIRE CHOKE                    	                              	                              	                              	2007-10-16	0.00	                	003	
+CI 	CAM START                     	                              	                              	                              	2007-10-16	0.00	                	002	
+CM 	CNC MILLING                   	                              	                              	                              	2007-11-08	0.00	                	001	
+CO 	CAM COMPLETE                  	                              	                              	                              	2007-10-16	0.00	                	002	
+CP 	CONTROL POCKET MILLING - CNC  	                              	                              	                              	2007-11-08	0.00	                	001	
+CP 	CUT PADS                      	                              	                              	                              	2008-08-13	0.00	                	003	
+CRM	CORE MILLING                  	                              	                              	                              	2008-03-13	0.00	                	001	
+CRM	CORE MILLING                  	                              	                              	                              	2008-03-13	0.00	                	002	
+CRM	CORE MILLING                  	                              	                              	                              	2008-03-13	0.00	                	003	
+CW 	CAM WAIT                      	                              	                              	                              	2007-10-16	0.00	                	002	
+DD 	DESIGN COMPLETE               	                              	                              	                              	2007-10-16	0.00	                	002	
+DI 	DESIGN START                  	                              	                              	                              	2007-10-16	0.00	                	002	
+DR 	DRAMET                        	                              	                              	                              	2007-10-15	0.00	                	001	
+DRR	DRILL & REAM                  	                              	                              	                              	2007-10-16	0.00	                	003	
+DS 	DRILL AND STAMP               	                              	                              	                              	2007-10-02	0.00	                	001	
+DS 	DRILL AND TAP                 	                              	                              	                              	2007-10-16	0.00	                	002	
+DS 	DRILL & LIFT HOLES            	                              	                              	                              	2008-03-20	0.00	                	003	
+DU 	HAND GRINDING                 	                              	                              	                              	2007-10-02	0.00	                	001	
+DU 	DUMORE                        	                              	                              	                              	2007-10-16	0.00	                	002	
+DU 	HAND GRINDING                 	                              	                              	                              	2007-10-16	0.00	                	003	
+DW 	DESIGN WAIT                   	                              	                              	                              	2007-10-16	0.00	                	002	
+D1 	HARDEN - 1ST DRAW             	                              	                              	                              	2008-03-13	0.00	                	002	
+D1 	1ST DRAW HEAT TREAT           	                              	                              	                              	2007-10-16	0.00	                	003	
+D2 	HARDEN - 2ND DRAW             	                              	                              	                              	2008-03-13	0.00	                	002	
+D2 	2ND DRAW HEAT TREAT           	                              	                              	                              	2007-10-16	0.00	                	003	
+D3 	HARDEN - 3RD DRAW             	                              	                              	                              	2008-03-13	0.00	                	002	
+D3 	3RD DRAW HEAT TREAT           	                              	                              	                              	2007-10-16	0.00	                	003	
+ED 	OFF SPARK EDM                 	                              	                              	                              	2007-10-16	0.00	                	002	
+EDM	EDM SINKER  - SHAPE PROFILE   	                              	                              	                              	2007-10-02	0.00	                	001	
+EDM	EDM SINKER - SHAPE PROFILE    	                              	                              	                              	2007-10-16	0.00	                	003	
+EF 	AT SPARK EDM - FEEDS          	                              	                              	                              	2007-10-16	0.00	                	002	
+EH 	AT SPARK EDM                  	                              	                              	                              	2007-10-16	0.00	                	002	
+EL 	CARBON ELECTRODE              	                              	                              	                              	2007-10-16	0.00	                	002	
+EN 	ENGRAVE                       	                              	                              	                              	2007-10-16	0.00	                	002	
+ES 	ON SPARK EDM                  	                              	                              	                              	2007-10-16	0.00	                	002	
+FB 	FEEDER BACK MILLING           	                              	                              	                              	2007-10-16	0.00	                	003	
+FC 	FLAME CUT                     	                              	                              	                              	2007-10-02	0.00	                	001	
+FC 	FLAME CUT                     	                              	                              	                              	2007-10-16	0.00	                	003	
+FD 	FIT COMPLETE                  	                              	                              	                              	2007-10-16	0.00	                	002	
+FF 	FEEDER FRONT MILLING          	                              	                              	                              	2007-10-16	0.00	                	003	
+FFM	FRONT FEEDER MILLING          	                              	                              	                              	2008-04-14	0.00	                	001	
+FL 	FLAME CUTTER                  	                              	                              	                              	2007-10-16	0.00	                	002	
+FN 	FINISH TURN AFTER H.T.        	                              	                              	                              	2007-10-16	0.00	                	002	
+FS 	FIT START                     	                              	                              	                              	2007-10-16	0.00	                	002	
+FT 	AT FIT                        	                              	                              	                              	2007-10-16	0.00	                	002	
+GA 	WIRE GAUGE                    	                              	                              	                              	2007-10-16	0.00	                	003	
+GR 	GRIND TO SIZE                 	                              	                              	                              	2007-11-08	0.00	                	001	
+GR 	GRINDER                       	                              	                              	                              	2007-10-16	0.00	                	002	
+GR 	GRIND & SIZE                  	                              	                              	                              	2007-10-16	0.00	                	003	
+HC 	RACK CLEAR                    	                              	                              	                              	2007-10-16	0.00	                	002	
+HC 	HEAT TREAT CLEAR              	                              	                              	                              	2007-10-16	0.00	                	003	
+HD 	HARDENING                     	                              	                              	                              	2007-10-16	0.00	                	002	
+HN 	PRE-HEAT TREAT INSPECTION     	                              	                              	                              	2007-10-16	0.00	                	003	
+HO 	OUTSIDE HEAT TREAT            	                              	                              	                              	2007-10-16	0.00	                	002	
+HP 	PRE HEAT                      	                              	                              	                              	2008-05-26	0.00	                	001	
+HP 	PRE-HEAT                      	                              	                              	                              	2008-07-04	0.00	                	002	
+HT 	HEAT TREAT                    	                              	                              	                              	2007-10-16	0.00	                	002	
+HT 	HARDEN                        	                              	                              	                              	2007-10-16	0.00	                	003	
+HT 	HARDEN                        	                              	                              	                              	2008-04-15	0.00	                	001	
+HT1	DRAW 1                        	                              	                              	                              	2008-04-15	0.00	                	001	
+HT2	DRAW 2                        	                              	                              	                              	2008-04-15	0.00	                	001	
+HT3	HARDEN - DRAW 3               	                              	                              	                              	2008-03-13	0.00	                	001	
+IN 	INSPECTION                    	                              	                              	                              	2007-10-16	0.00	                	002	
+INS	POLISH, ASSEMBLE AND INSPECT  	                              	                              	                              	2007-10-02	0.00	                	001	
+INS	POLISH, ASSEMBLE & INSPECT    	                              	                              	                              	2007-10-16	0.00	                	003	
+KEY	KEYWAY MILLING                	                              	                              	                              	2007-10-16	0.00	                	003	
+KY 	TOOL ROOM - KEYWAY            	                              	                              	                              	2007-10-16	0.00	                	002	
+LA 	AT NC LATHE                   	                              	                              	                              	2007-10-16	0.00	                	002	
+LD 	OFF NC LATHE                  	                              	                              	                              	2007-10-16	0.00	                	002	
+LM 	MANUAL LATHE                  	                              	                              	                              	2008-08-18	0.00	                	003	
+LS 	ON NC LATHE                   	                              	                              	                              	2007-10-16	0.00	                	002	
+MB 	MANDREL BACK MILLING          	                              	                              	                              	2007-10-16	0.00	                	003	
+MB 	MANDREL BACK MILLING          	                              	                              	                              	2007-11-08	0.00	                	001	
+MCB	MACHINE CENTER - BACK         	                              	                              	                              	2008-07-04	0.00	                	002	
+MCF	MACHINE CENTER - FRONT        	                              	                              	                              	2008-07-04	0.00	                	002	
+MCK	MACHINE CENTER - KEYWAY       	                              	                              	                              	2008-07-04	0.00	                	002	
+MD 	MACHINE CENTRE COMPLETE       	                              	                              	                              	2007-10-16	0.00	                	002	
+ME 	MAKE ELECTRODE                	                              	                              	                              	2008-03-13	0.00	                	003	
+ME 	MAKE ELECTRODE                	                              	                              	                              	2008-03-13	0.00	                	002	
+ME 	MAKE ELECTRODE                	                              	                              	                              	2008-03-13	0.00	                	001	
+MF 	MANDREL FRONT MILLING         	                              	                              	                              	2007-10-16	0.00	                	003	
+MF 	MANDREL FRONT MILLING         	                              	                              	                              	2007-11-08	0.00	                	001	
+MI 	MACHINE CENTRE - SIZING       	                              	                              	                              	2007-10-16	0.00	                	002	
+ML 	MANUAL LATHE                  	                              	                              	                              	2007-10-16	0.00	                	002	
+MM 	MANUAL MILLING                	                              	                              	                              	2007-11-08	0.00	                	001	
+MM 	TOOL ROOM                     	                              	                              	                              	2007-10-16	0.00	                	002	
+MM 	MANUAL MILLING                	                              	                              	                              	2008-08-13	0.00	                	003	
+MS 	AT MACHINE CENTRE - SKIM      	                              	                              	                              	2007-10-16	0.00	                	002	
+MY 	AT MACHINE CENTRE - KEYWAY    	                              	                              	                              	2007-10-16	0.00	                	002	
+NC 	MACHINE CENTRE ( PROGRAM READ)	                              	                              	                              	2007-10-16	0.00	                	002	
+NCE	CNC MILL ELECTRODES           	                              	                              	                              	2007-10-16	0.00	                	003	
+NI 	NITRIDE                       	                              	                              	                              	2007-10-16	0.00	                	002	
+NI 	NITRIDE                       	                              	                              	                              	2007-10-16	0.00	                	003	
+NI 	NITRIDE                       	                              	                              	                              	2007-11-08	0.00	                	001	
+NS 	NC LATHE SKIM (ZPS)           	                              	                              	                              	2007-10-16	0.00	                	002	
+OB 	BOLSTER BACK MILLING          	                              	                              	                              	2007-10-16	0.00	                	003	
+OF 	BOLSTER FRONT MILLING         	                              	                              	                              	2007-10-16	0.00	                	003	
+OH 	ON HOLD                       	                              	                              	                              	2007-10-16	0.00	                	002	
+OM 	ON MACHINE CENTRE             	                              	                              	                              	2007-10-16	0.00	                	002	
+PB 	PLATE BACK MILLING            	                              	                              	                              	2007-10-02	0.00	                	001	
+PB 	PLATE BACK MILLING            	                              	                              	                              	2007-10-16	0.00	                	003	
+PBB	PLATE BACK BURN               	                              	                              	                              	2007-11-05	0.00	                	001	
+PD 	POLISH COMPLETE               	                              	                              	                              	2007-10-16	0.00	                	002	
+PF 	PLATE FRONT MILLING           	                              	                              	                              	2007-10-02	0.00	                	001	
+PF 	PLATE FRONT MILLING           	                              	                              	                              	2007-10-16	0.00	                	003	
+PH 	AT POLISH                     	                              	                              	                              	2007-10-16	0.00	                	002	
+PI 	PIN                           	                              	                              	                              	2007-10-16	0.00	                	002	
+PM 	POCKET MILLING POST H/T       	                              	                              	                              	2008-04-14	0.00	                	001	
+PN 	PIN OUT                       	                              	                              	                              	2007-10-16	0.00	                	003	
+PN 	PIN OUT                       	                              	                              	                              	2008-04-15	0.00	                	001	
+PO 	POLISH START                  	                              	                              	                              	2007-10-16	0.00	                	002	
+PS 	POLISH STOP                   	                              	                              	                              	2007-10-16	0.00	                	002	
+RE 	REMACHINE-LATHE               	                              	                              	                              	2007-11-08	0.00	                	001	
+RE 	RE-ENGRAVE                    	                              	                              	                              	2008-07-04	0.00	                	002	
+REM	MACHINE TO SIZE - FACE MILL   	                              	                              	                              	2007-11-08	0.00	                	001	
+RF 	WIRE EDM RELIEF               	                              	                              	                              	2007-10-16	0.00	                	002	
+RF 	WIRE RELIEF                   	                              	                              	                              	2007-10-16	0.00	                	003	
+RH 	RELEASED                      	                              	                              	                              	2007-10-16	0.00	                	002	
+RM 	REMACHINE - MILLING           	                              	                              	                              	2008-04-22	0.00	                	001	
+RPR	REPAIR - WELD & MILL          	                              	                              	                              	2007-10-16	0.00	                	003	
+RWK	REWORK - MILLING              	                              	                              	                              	2007-10-16	0.00	                	003	
+SAW	SAWCUTTING                    	                              	                              	                              	2007-10-02	0.00	                	001	
+SAW	SAW CUTTING                   	                              	                              	                              	2007-10-16	0.00	                	003	
+SAW	SAW                           	                              	                              	                              	2008-07-04	0.00	                	002	
+SB 	SANDBLASTING                  	                              	                              	                              	2007-10-02	0.00	                	001	
+SB 	SANDBLAST                     	                              	                              	                              	2008-07-04	0.00	                	002	
+SBM	SPARK BACK MILLING            	                              	                              	                              	2008-04-14	0.00	                	001	
+SC 	SCRAP                         	                              	                              	                              	2007-10-16	0.00	                	002	
+SF 	SPARK FEED HOLE               	                              	                              	                              	2007-11-08	0.00	                	001	
+SHP	SHAPE INPUT                   	                              	                              	                              	2007-10-02	0.00	                	001	
+SI 	SHAPE INPUT                   	                              	                              	                              	2008-03-20	0.00	                	003	
+SK 	MANUAL LATHE - SKIM           	                              	                              	                              	2007-10-16	0.00	                	002	
+SM 	SHAPE MILLING                 	                              	                              	                              	2008-03-13	0.00	                	001	
+SM 	SHAPE MILLING                 	                              	                              	                              	2008-03-13	0.00	                	002	
+SM 	SHAPE MILLING                 	                              	                              	                              	2008-03-13	0.00	                	003	
+SWE	SAW ELECTRODES                	                              	                              	                              	2007-10-16	0.00	                	003	
+TB 	TAPER BACK MILLING            	                              	                              	                              	2008-08-13	0.00	                	003	
+TD 	TOOL ROOM COMPLETE            	                              	                              	                              	2007-10-16	0.00	                	002	
+TF 	TO FLAME CUTTER               	                              	                              	                              	2007-10-16	0.00	                	002	
+TG 	TURN FLANGE                   	                              	                              	                              	2007-10-16	0.00	                	002	
+TH 	TO HEAT TREAT                 	                              	                              	                              	2007-10-16	0.00	                	002	
+TI 	IN TOOL ROOM                  	                              	                              	                              	2007-10-16	0.00	                	002	
+TS 	TOOL ROOM START               	                              	                              	                              	2007-10-16	0.00	                	002	
+TT 	TURN TAPER                    	                              	                              	                              	2007-10-16	0.00	                	002	
+TUN	EDM SINKER - TUNNEL           	                              	                              	                              	2007-10-16	0.00	                	003	
+TUR	TURNING                       	                              	                              	                              	2007-10-02	0.00	                	001	
+TUR	TURNING                       	                              	                              	                              	2007-10-16	0.00	                	003	
+TZ 	TOOL ROOM STOP                	                              	                              	                              	2007-10-16	0.00	                	002	
+WC 	WELD COMPLETE                 	                              	                              	                              	2007-10-16	0.00	                	002	
+WD 	WELDING                       	                              	                              	                              	2007-10-02	0.00	                	001	
+WD 	WELDING                       	                              	                              	                              	2008-03-13	0.00	                	003	
+WE 	ON WIRE MACHINE               	                              	                              	                              	2007-10-16	0.00	                	002	
+WIR	WIRE CUT SHAPE PROFILE        	                              	                              	                              	2007-10-02	0.00	                	001	
+WIR	WIRE CUT SHAPE PROFILE        	                              	                              	                              	2007-10-16	0.00	                	003	
+WO 	OFF WIRE MACHINE              	                              	                              	                              	2007-10-16	0.00	                	002	
+WS 	WELD IN                       	                              	                              	                              	2007-10-16	0.00	                	002	
+ZK 	ZPS-SKIM                      	                              	                              	                              	2008-07-04	0.00	                	002	
+ZS 	ZPS-SIZING                    	                              	                              	                              	2008-07-04	0.00	                	002	
+Z1 	AT ZPS 1                      	                              	                              	                              	2007-10-16	0.00	                	002	
+

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="ErrorCodeARC.txt" />
+    <None Include="quotation.rpt">
+      <Filter>Reports</Filter>
+    </None>
+    <None Include="profit.rpt">
+      <Filter>Reports</Filter>
+    </None>
+    <None Include="sales_report.rpt">
+      <Filter>Reports</Filter>
+    </None>
+    <None Include="invoice.rpt">
+      <Filter>Reports</Filter>
+    </None>
+    <None Include="monthly_sales_report_by_customers.rpt">
+      <Filter>Reports</Filter>
+    </None>
+    <None Include="budget_sales.rpt">
+      <Filter>Reports</Filter>
+    </None>
+    <None Include="customer_part_price.rpt">
+      <Filter>Reports</Filter>
+    </None>
+    <None Include="PL report.rpt">
+      <Filter>Reports</Filter>
+    </None>
+    <None Include="sales_report_colombia.rpt">
+      <Filter>Reports</Filter>
+    </None>
+    <None Include="sales_report_markham.rpt">
+      <Filter>Reports</Filter>
+    </None>
+    <None Include="sales_report_michigan.rpt">
+      <Filter>Reports</Filter>
+    </None>
+    <None Include="sales_report_texas.rpt">
+      <Filter>Reports</Filter>
+    </None>
+    <None Include="trail balance.rpt">
+      <Filter>Reports</Filter>
+    </None>
+    <None Include="report_deploy.bat">
+      <Filter>Reports</Filter>
+    </None>
+    <None Include="Solarsoft DB Structure.xlsx">
+      <Filter>Solarsoft</Filter>
+    </None>
+    <None Include="database_tables.xlsx">
+      <Filter>Solarsoft</Filter>
+    </None>
+    <None Include="iVP 5.2 User Guide.pdf">
+      <Filter>Solarsoft</Filter>
+    </None>
+    <None Include="ProductionReports_FlatFile-BatchMode.txt">
+      <Filter>Solarsoft</Filter>
+    </None>
+    <None Include="Production Reporting Data File Format_20080605.doc">
+      <Filter>Solarsoft</Filter>
+    </None>
+    <None Include="Customized Query Menu.doc">
+      <Filter>Solarsoft</Filter>
+    </None>
+    <None Include="Output options in CL.doc">
+      <Filter>Solarsoft</Filter>
+    </None>
+    <None Include="Scheduled Job to run a query.doc">
+      <Filter>Solarsoft</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Reports">
+      <UniqueIdentifier>{68d27a47-b75b-427b-a5f0-ec74e4453957}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solarsoft">
+      <UniqueIdentifier>{15f27d6f-dfc9-4d59-a3b3-9c0dab408fe7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

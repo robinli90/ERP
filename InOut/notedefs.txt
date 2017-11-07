@@ -1,0 +1,83 @@
+classid subid description                              costind     perfind                                               
+------- ----- ---------------------------------------- ----------- --------
+                                                       NULL        NULL
+CMMT    INSP  Inspection                               NULL        NULL
+CUST    LAYP  Layout problem                           NULL        NULL
+CUST    OTHR  Other customer issue                     NULL        NULL
+CUST    SCLR  Shape does not clear tooling or press    NULL        NULL
+CUST    SHPD  Shape dimension problems                 NULL        NULL
+CUST    WDSZ  Wrong die size                           NULL        NULL
+CUST    WPRS  Wrong press for shape                    NULL        NULL
+ERR     BCHP  Bearing chopped                          NULL        NULL
+ERR     BFB   Bolster/Feeder/Backer                    NULL        NULL
+ERR     BFLC  Bad flame cut                            NULL        NULL
+ERR     BLSZ  Billet Size                              NULL        NULL
+ERR     BPED  Program edited wrong                     NULL        NULL
+ERR     BROK  Tool broke                               NULL        NULL
+ERR     BSQE  Bearing squareness error                 NULL        NULL
+ERR     CMGE  CAD_ Geometry  Missing                   NULL        NULL
+ERR     CWMS  CAM MCS WRONG                            NULL        NULL
+ERR     DSZ   Die Size                                 NULL        NULL
+ERR     DULL  Dull Cutter                              NULL        NULL
+ERR     EBBL  CAD_Geometry Extra                       NULL        NULL
+ERR     ENGR  Engraving                                NULL        NULL
+ERR     FMIS  File Missing                             NULL        NULL
+ERR     GPOM  Green and P.O. info mismatch             NULL        NULL
+ERR     ICGO  Core Gauge Offset Incorrect              NULL        NULL
+ERR     IDIM  MAN_Dimension Incorrect                  NULL        NULL
+ERR     IGEO  MAN_Geometry Incorrect                   NULL        NULL
+ERR     IL45  MAN_L45 Incorrect                        NULL        NULL
+ERR     ILIO  Lead In/Out Incrrect                     NULL        NULL
+ERR     INBG  CAM_Bearing Incorrect                    NULL        NULL
+ERR     INCI  Information Incorrect                    NULL        NULL
+ERR     INCR  Core Gauge Incorrect                     NULL        NULL
+ERR     INTL  Tool Incorrect                           NULL        NULL
+ERR     IPBL  MAN_Pins/Bolts Incorrect                 NULL        NULL
+ERR     ITRN  MAN_Turning Incorrect                    NULL        NULL
+ERR     LHMS  Lifting hole missing                     NULL        NULL
+ERR     LOUT  Layout                                   NULL        NULL
+ERR     MBRG  CAD_Bearings Missing                     NULL        NULL
+ERR     MDIM  CAD_Dimensions Missing                   NULL        NULL
+ERR     MINE  CAM_Information Missing                  NULL        NULL
+ERR     MINF  Missing Information                      NULL        NULL
+ERR     MINP  Incomplete machining                     NULL        NULL
+ERR     ML45  CAD_L45 Missing                          NULL        NULL
+ERR     MMER  Manual milling error                     NULL        NULL
+ERR     MPBL  CAD_Pins/Bolts Missing                   NULL        NULL
+ERR     MPRD  CAM_Mid-production change                NULL        NULL
+ERR     MUCW  Mandrel Undercut Wrong                   NULL        NULL
+ERR     NGRV  Nitrogen Grooves                         NULL        NULL
+ERR     NTRA  CAM_No Translation                       NULL        NULL
+ERR     OCER  Other CAM Error                          NULL        NULL
+ERR     OFFS  Wrong offset                             NULL        NULL
+ERR     OMIL  Other milling error                      NULL        NULL
+ERR     OSHP  Other shop error                         NULL        NULL
+ERR     OTHR  Other Error                              NULL        NULL
+ERR     OTHW  Other wire error                         NULL        NULL
+ERR     OTRN  Other turning error                      NULL        NULL
+ERR     PFDW  Pocket finish or depth wrong             NULL        NULL
+ERR     PLOC  Pin Locations                            NULL        NULL
+ERR     PNCL  CAD_Closed Profiles Not Closed           NULL        NULL
+ERR     PULO  Job pulled out of chuck                  NULL        NULL
+ERR     SHP   Shape Error                              NULL        NULL
+ERR     SQUO  Shape needed quoting                     NULL        NULL
+ERR     TCRS  Tool crash                               NULL        NULL
+ERR     TDNR  Tool not run                             NULL        NULL
+ERR     TLWR  Incorect Tool                            NULL        NULL
+ERR     TMIS  Tool Missing                             NULL        NULL
+ERR     TWTD  Turning wrong thickness or diameter      NULL        NULL
+ERR     WDIR  Cutting Direction Wrong                  NULL        NULL
+ERR     WGRT  Wrong grinding thickness                 NULL        NULL
+ERR     WLTY  CAD_Line Type Wrong                      NULL        NULL
+ERR     WLYR  CAD_Layer Wrong                          NULL        NULL
+ERR     WMRK  Wire mark problem                        NULL        NULL
+ERR     WSKG  Wrong sparking gauge used                NULL        NULL
+ERR     WSPT  Cutting spot Wrong                       NULL        NULL
+ERR     WSTM  Wrong Stamping                           NULL        NULL
+ERR     WUNC  Under Cut Size Incorrect                 NULL        NULL
+INFO    APRV  Customer Approval                        NULL        NULL
+INFO    FDBK  Feedback                                 NULL        NULL
+INFO    OTHR  Other Information                        NULL        NULL
+
+(78 row(s) affected)
+

@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ObfuscatedRelease|Win32">
+      <Configuration>ObfuscatedRelease</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ObfuscatedRelease|x64">
+      <Configuration>ObfuscatedRelease</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="X64|Win32">
+      <Configuration>X64</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="X64|x64">
+      <Configuration>X64</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D2A5DC07-CD6F-4701-B95F-528B599F7E37}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <SccProjectName>
+    </SccProjectName>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ObfuscatedRelease|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='X64|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ObfuscatedRelease|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='X64|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ObfuscatedRelease|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='X64|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ObfuscatedRelease|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='X64|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Debug\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ObfuscatedRelease|Win32'">Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='X64|Win32'">Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ObfuscatedRelease|x64'">Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='X64|x64'">Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ObfuscatedRelease|Win32'">Release\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='X64|Win32'">Release\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ObfuscatedRelease|x64'">Release\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='X64|x64'">Release\</IntDir>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\inc;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\inc;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\inc;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='ObfuscatedRelease|Win32'">..\inc;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='X64|Win32'">..\inc;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\inc;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='ObfuscatedRelease|x64'">..\inc;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='X64|x64'">..\inc;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='ObfuscatedRelease|Win32'">..\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='X64|Win32'">..\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='ObfuscatedRelease|x64'">..\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='X64|x64'">..\lib;$(LibraryPath)</LibraryPath>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)D</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName)D</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <CustomBuildStep>
+      <Command>cpybldd.bat</Command>
+      <Outputs>cpybldd.log;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <Lib />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <CustomBuildStep>
+      <Command>cpybldd.bat</Command>
+      <Outputs>cpybldd.log;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <Lib />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <CustomBuildStep>
+      <Command>cpybld.bat</Command>
+      <Outputs>cpybld.log;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <Lib />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ObfuscatedRelease|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <CustomBuildStep>
+      <Command>cpybld.bat</Command>
+      <Outputs>cpybld.log;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <Lib />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='X64|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <CustomBuildStep>
+      <Command>cpybld.bat</Command>
+      <Outputs>cpybld.log;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <Lib />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <CustomBuildStep>
+      <Command>cpybld.bat</Command>
+      <Outputs>cpybld.log;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <Lib />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ObfuscatedRelease|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <CustomBuildStep>
+      <Command>cpybld.bat</Command>
+      <Outputs>cpybld.log;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <Lib />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='X64|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <CustomBuildStep>
+      <Command>cpybld.bat</Command>
+      <Outputs>cpybld.log;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <Lib />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="adjobjs.cpp" />
+    <ClCompile Include="arcgeom.cpp" />
+    <ClCompile Include="arcisect.cpp" />
+    <ClCompile Include="arcutils.cpp" />
+    <ClCompile Include="bezier.cpp" />
+    <ClCompile Include="bool2d.cpp" />
+    <ClCompile Include="boolevents.cpp" />
+    <ClCompile Include="boolSetDiff.cpp" />
+    <ClCompile Include="boolSetUnion.cpp" />
+    <ClCompile Include="bspPolygon.cpp" />
+    <ClCompile Include="bspTree.cpp" />
+    <ClCompile Include="cadfuncs.cpp" />
+    <ClCompile Include="CAM4AXwire.cpp" />
+    <ClCompile Include="chaining.cpp" />
+    <ClCompile Include="circtan.cpp" />
+    <ClCompile Include="clipping.cpp" />
+    <ClCompile Include="closestPoints.cpp" />
+    <ClCompile Include="convexhull.cpp" />
+    <ClCompile Include="crvarea.cpp" />
+    <ClCompile Include="crvAreaMoments.cpp" />
+    <ClCompile Include="crvboolean.cpp" />
+    <ClCompile Include="crvChamfer.cpp" />
+    <ClCompile Include="crvcopy.cpp" />
+    <ClCompile Include="crvfilter.cpp" />
+    <ClCompile Include="crvfllt.cpp" />
+    <ClCompile Include="crvfllt3D.cpp" />
+    <ClCompile Include="crvgeom.cpp" />
+    <ClCompile Include="crvisect.cpp" />
+    <ClCompile Include="crvoffst.cpp" />
+    <ClCompile Include="crvsynch.cpp" />
+    <ClCompile Include="cs_barcodes.cpp" />
+    <ClCompile Include="cs_crvgroup.cpp" />
+    <ClCompile Include="cs_plane.cpp" />
+    <ClCompile Include="cs_polygon.cpp" />
+    <ClCompile Include="cs_surffuncs.cpp" />
+    <ClCompile Include="curves.cpp" />
+    <ClCompile Include="curveset.cpp" />
+    <ClCompile Include="evtxover.cpp" />
+    <ClCompile Include="fitcircle.cpp" />
+    <ClCompile Include="fonts.cpp" />
+    <ClCompile Include="gaussj.cpp" />
+    <ClCompile Include="geomfuncs.cpp" />
+    <ClCompile Include="instersectionSet.cpp" />
+    <ClCompile Include="intersection.cpp" />
+    <ClCompile Include="isect.cpp" />
+    <ClCompile Include="isectrec.cpp" />
+    <ClCompile Include="linegeom.cpp" />
+    <ClCompile Include="listtest.cpp" />
+    <ClCompile Include="machoffset.cpp" />
+    <ClCompile Include="mathutls.cpp" />
+    <ClCompile Include="matrices.cpp" />
+    <ClCompile Include="NMcrvfuncs.cpp" />
+    <ClCompile Include="offsovals.cpp" />
+    <ClCompile Include="ofsevents.cpp" />
+    <ClCompile Include="ofsindex.cpp" />
+    <ClCompile Include="oibuildcrvs.cpp" />
+    <ClCompile Include="orientCurve.cpp" />
+    <ClCompile Include="outerbounds.cpp" />
+    <ClCompile Include="pocketing.cpp" />
+    <ClCompile Include="points.cpp" />
+    <ClCompile Include="points2d.cpp" />
+    <ClCompile Include="projections.cpp" />
+    <ClCompile Include="QuickSort.cpp" />
+    <ClCompile Include="rects.cpp" />
+    <ClCompile Include="segments.cpp" />
+    <ClCompile Include="shapes.cpp" />
+    <ClCompile Include="shapeXForm.cpp" />
+    <ClCompile Include="stretch.cpp" />
+    <ClCompile Include="strings.cpp" />
+    <ClCompile Include="tokens.cpp" />
+    <ClCompile Include="trimcrvs.cpp" />
+    <ClCompile Include="varoffset.cpp" />
+    <ClCompile Include="varofsNM.cpp" />
+    <ClCompile Include="vectors.cpp" />
+    <ClCompile Include="vectors2d.cpp" />
+    <ClCompile Include="xhatching.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cs_adjobjs.h" />
+    <ClInclude Include="CS_BarCodes.h" />
+    <ClInclude Include="cs_bezier.h" />
+    <ClInclude Include="cs_booleans.h" />
+    <ClInclude Include="cs_bspTree.h" />
+    <ClInclude Include="cs_cadfuncs.h" />
+    <ClInclude Include="cs_camfuncs.h" />
+    <ClInclude Include="cs_chain.h" />
+    <ClInclude Include="cs_convexhull.h" />
+    <ClInclude Include="cs_crvgroup.h" />
+    <ClInclude Include="cs_curves.h" />
+    <ClInclude Include="cs_fitcircle.h" />
+    <ClInclude Include="cs_fonts.h" />
+    <ClInclude Include="cs_geomalgos.h" />
+    <ClInclude Include="cs_geomdefs.h" />
+    <ClInclude Include="cs_geometry.h" />
+    <ClInclude Include="cs_geomutils.h" />
+    <ClInclude Include="cs_mathutls.h" />
+    <ClInclude Include="cs_matrices.h" />
+    <ClInclude Include="cs_nmcurves.h" />
+    <ClInclude Include="cs_offset.h" />
+    <ClInclude Include="cs_offsoval.h" />
+    <ClInclude Include="cs_plane.h" />
+    <ClInclude Include="cs_pocketing.h" />
+    <ClInclude Include="cs_polygon.h" />
+    <ClInclude Include="cs_QuickSort.h" />
+    <ClInclude Include="cs_rects.h" />
+    <ClInclude Include="cs_shapes.h" />
+    <ClInclude Include="cs_tokens.h" />
+    <ClInclude Include="cs_varoffset.h" />
+    <ClInclude Include="cs_vectors.h" />
+    <ClInclude Include="csstrs.h" />
+    <ClInclude Include="Disable4786.h" />
+    <ClInclude Include="tokens.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpybld.bat" />
+    <None Include="cpybldd.bat" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

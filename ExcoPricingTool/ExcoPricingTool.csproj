@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{924CBB86-55B5-4A77-AC9C-D81489A4D70F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ExcoPricingTool</RootNamespace>
+    <AssemblyName>ExcoPricingTool</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Excologo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ObfuscatedRelease|AnyCPU'">
+    <OutputPath>bin\ObfuscatedRelease\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\..\Robin's Workspace\Financial Journal - Copy\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.Charting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add Tooling\Add_Solid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Tooling\Add_Solid.Designer.cs">
+      <DependentUpon>Add_Solid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Tooling\Add_Hollow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Tooling\Add_Hollow.Designer.cs">
+      <DependentUpon>Add_Hollow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Tooling\Add_Feeder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Tooling\Add_Feeder.Designer.cs">
+      <DependentUpon>Add_Feeder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Tooling\Add_Backer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Tooling\Add_Backer.Designer.cs">
+      <DependentUpon>Add_Backer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Tooling\Add_Bolster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Tooling\Add_Bolster.Designer.cs">
+      <DependentUpon>Add_Bolster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Tooling\Add_Sub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Tooling\Add_Sub.Designer.cs">
+      <DependentUpon>Add_Sub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Tooling\Add_Ring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Tooling\Add_Ring.Designer.cs">
+      <DependentUpon>Add_Ring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Tooling\Extra_Charges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Tooling\Extra_Charges.Designer.cs">
+      <DependentUpon>Extra_Charges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Tooling\Support_Selector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Tooling\Support_Selector.Designer.cs">
+      <DependentUpon>Support_Selector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Encryption.cs" />
+    <Compile Include="Objects\PDFGenerator.cs" />
+    <Compile Include="View_Current_Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_Current_Order.Designer.cs">
+      <DependentUpon>View_Current_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="History.Designer.cs">
+      <DependentUpon>History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Miscellaneous Forms\Charge_Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Miscellaneous Forms\Charge_Settings.Designer.cs">
+      <DependentUpon>Charge_Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Miscellaneous Forms\Add_Notes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Miscellaneous Forms\Add_Notes.Designer.cs">
+      <DependentUpon>Add_Notes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Miscellaneous Forms\DatabaseSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Miscellaneous Forms\DatabaseSelector.Designer.cs">
+      <DependentUpon>DatabaseSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Miscellaneous Forms\Loading_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Miscellaneous Forms\Loading_Form.Designer.cs">
+      <DependentUpon>Loading_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objects\AdvancedComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Objects\Charges.cs" />
+    <Compile Include="Objects\DatabaseClasses.cs" />
+    <Compile Include="Objects\ExcoODBC.cs" />
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Miscellaneous Forms\Form_Message_Box.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Miscellaneous Forms\Form_Message_Box.Designer.cs">
+      <DependentUpon>Form_Message_Box.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objects\Hollow.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objects\FadeControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Miscellaneous Forms\Form_Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Miscellaneous Forms\Form_Template.Designer.cs">
+      <DependentUpon>Form_Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objects\MemberwiseClone.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Objects\Solid.cs" />
+    <Compile Include="Objects\Support.cs" />
+    <Compile Include="Miscellaneous Forms\Yes_No_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Miscellaneous Forms\Yes_No_Dialog.Designer.cs">
+      <DependentUpon>Yes_No_Dialog.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Add Tooling\Add_Solid.resx">
+      <DependentUpon>Add_Solid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Tooling\Add_Hollow.resx">
+      <DependentUpon>Add_Hollow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Tooling\Add_Feeder.resx">
+      <DependentUpon>Add_Feeder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Tooling\Add_Backer.resx">
+      <DependentUpon>Add_Backer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Tooling\Add_Bolster.resx">
+      <DependentUpon>Add_Bolster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Tooling\Add_Sub.resx">
+      <DependentUpon>Add_Sub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Tooling\Add_Ring.resx">
+      <DependentUpon>Add_Ring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Tooling\Extra_Charges.resx">
+      <DependentUpon>Extra_Charges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Tooling\Support_Selector.resx">
+      <DependentUpon>Support_Selector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Current_Order.resx">
+      <DependentUpon>View_Current_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="History.resx">
+      <DependentUpon>History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Miscellaneous Forms\Charge_Settings.resx">
+      <DependentUpon>Charge_Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Miscellaneous Forms\Add_Notes.resx">
+      <DependentUpon>Add_Notes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Miscellaneous Forms\DatabaseSelector.resx">
+      <DependentUpon>DatabaseSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Miscellaneous Forms\Loading_Form.resx">
+      <DependentUpon>Loading_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Miscellaneous Forms\Form_Message_Box.resx">
+      <DependentUpon>Form_Message_Box.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Miscellaneous Forms\Form_Template.resx">
+      <DependentUpon>Form_Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Miscellaneous Forms\Yes_No_Dialog.resx">
+      <DependentUpon>Yes_No_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="confuser.crproj" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Excologo.ico" />
+    <Content Include="Objects\imageedit_7_6182657320.ico" />
+    <Content Include="Resources\clear.png" />
+    <Content Include="Resources\del.png" />
+    <Content Include="Resources\edit.png" />
+    <Content Include="Resources\EXCO.png" />
+    <Content Include="Resources\imageedit_2_3662441149.png" />
+    <Content Include="Resources\imageedit_6_5771261632.png" />
+    <Content Include="Resources\load.png" />
+    <Content Include="Resources\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

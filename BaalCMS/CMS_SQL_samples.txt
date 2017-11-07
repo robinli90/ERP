@@ -1,0 +1,39 @@
+-- select * from prodtest.opcode where aeplnt = '001' order by AECODE
+
+-- select * from prodtest.methdr where aopart like 'HD 11 X 5 %' and aoplnt = '001' order by aopart, aoseq#
+
+-- select count(*) from prodtest.methdr where aopart like 'HD 10 X 5 %' and aoplnt = '001' 
+
+-- select distinct aoseq# From prodtest.methdr where aoopnm = 'GR' and aoseq# = 280 and aopart like '%MAN%'
+
+-- select distinct aoseq# From prodtest.methdr where aoopnm = 'WIR' and aopart like '%PLA%' and aoplnt = '001'
+
+-- select * from prodtest.methdr where aopart like 'HD %' and aoplnt = '001' AND AOOPNM = 'HT3' 
+
+-- select * From prodtest.methdr where aoopnm = 'MB' and aoseq# = 360 and aopart like '%MAN%' and aoplnt = '001'
+
+-- select * from prodtest.methdr where aopart like 'HD 20.25 X 5 %' and aoplnt = '001' order by aopart, aoseq#
+
+-- select * from prodtest.cjobh where dnord# = 211404
+
+-- 0009515    001000002   001000003  001000004 
+
+-- select * from prodtest.cjobdr where EDJOB# = '001000002'
+ order by EDSEQ#
+
+select * from prodtest.sftx
+
+
+-- select * from prodtest.sftx  order by Q4CDAT DESC, Q4CTIM DESC
+
+-- select * from prodtest.cjobdr where edjob# = '001000003' order by edseq#
+
+-- select * from prodtest.tazm order by ZMEMPL
+
+--SELECT Q4BTID,Q4TFCD FROM PRODTEST.SFTX WHERE Q4DEPT = '001L1' AND Q4RESC = 'L6' AND (Q4FTCD = '10000' OR Q4FTCD = '10100') AND Q4CDAT = '2009-04-14' ORDER BY Q4CDAT DESC, Q4CTIM DESC
+
+select * from prodtest.sftx  
+
+-- select * from prodtest.ocrh  where dcbcus = '0000120S'  and dcord# < 400000
+
+

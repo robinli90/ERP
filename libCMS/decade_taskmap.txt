@@ -1,0 +1,74 @@
+task taskname             
+---- -------------------- 
+AM   Multi Gauge Program
+AS   Assembly
+BB   Backer Blanched
+CB   Cam - Big Lathe
+CC   Core Mill Check
+CH   Wire Choke
+CI   CAM Start
+CL   CAM Lathe
+CM   CAM
+CO   CAM Complete
+CP   CAM Lathe Inserts
+CR   CAM Return
+CS   Sparky Check
+D1   1st Draw
+D2   2nd Draw
+D3   3rd Draw
+DD   Design Complete
+DI   Design Start
+DP   Drill Copper Plate
+DR   Design Return
+DS   Drill and Stamp
+DU   Dumore
+EL   Carbon Electrode
+FL   Flame Cutter
+GA   Gauge
+GD   Multi Gauge Mill
+HC   Rack Clear
+HD   Hardening
+HL   Hold Job
+HT   Heat Treat
+IC   Inspection Complete
+ID   Gauge Insert Piece
+IN   Inspection
+IP   Gauge Insert Holder
+IS   Inspection Start
+LA   NC Lathe
+LC   Lathe Check
+LF   Remachine Lathe Fin
+LO   Layout
+LR   Lathe Review
+MB   Mandrel Back Check
+MC   Mandrel Front Check
+ML   Manual Lathe
+MM   Manual Mill
+NC   NC Milling
+NS   Nitride Start
+PB   Plate Back Check
+PC   Plate Front Check
+PG   Part Gauge
+PH   Pre-Heat
+PO   Plate NC Out
+PR   Pocket Remachine
+RF   Wire EDM Relief
+RK   Heat Treat Rack Load
+RL   Release Job
+SA   Sales Release
+SC   Scrap
+SE   Spark EDM
+SH   Shape Complete 
+SI   Shape Start
+SR   Shape Return
+SX   Sales Return
+TB   Taper Back Mill
+TC   Turning Check
+VW   View Wire In
+WC   Welding Complete
+WE   Wire EDM
+WO   Wire Out
+WS   Welding Start
+
+(69 row(s) affected)
+

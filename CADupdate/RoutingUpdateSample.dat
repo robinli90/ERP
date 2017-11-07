@@ -1,0 +1,228 @@
+# RoutingUpdateSample.dat
+# This is the routing method update definition file. Programs that must make 
+# modifications to the CJOBDR table will load and scan through the records in 
+# this file to find the first matching record and use that to update the 
+# routing data. Thus you should put the wildcard record definitions at the 
+# end of the file. Records by customer number are expected to be mininal and
+# thus are included in this file as well. Eventually we will want to optimize
+# things so that customer specific records go into separate files, to improve
+# processing speed and to simplify management (we might never need to go that
+# far however).
+#
+#
+# Each non-blank line must contain 1 of 2 row definitions as defined below. The condition
+# row is enclosed in [ ] brackets and also acts a header record for the detail routing
+# operations to be applied to that conditioin. Within a row, fields must be separated by 
+# semicolons and follow the format described below.
+#
+# The file is read until the first matching condition record is found. Then the fields
+# within that condition are loaded and applied to the part as required. Each part
+# within a job is processed separately. Thus is is possible to have different conditions
+# apply to the mandrel and plate of a hollow die for example. Processing stops at the 
+# first matching condition (see more below re: CONTINUE ). 
+#
+#   Field   Description
+#     1     FEATURE,OPTION: this simply needs to be a substring contained in the 
+#           features and options description, any match of this string within the description
+#           will be taken as a match. Thus for "MULTI - MANDREL", if the word MULTI doesn't 
+#           appear in any other feature/option record, then it would be sufficient to use 
+#           MULTI as the field definition. The feature and option are both tested separately
+#           if you know that the option is sufficient to uniquely match the required 
+#           record, then you can specify * for the feature. If there is no comma in the string
+#           then it is interpreted as  *,option 
+#     2     CUSTOMER: this is the solarsoft customer number, max of 8 chars. To match all 
+#           customers for this record, use a '*' character (without the quotes). 
+#     3     DIAM: This defines the exact diameter or range of diameters to match against 
+#           the parts. To match all parts define 0-100 which means all parts between 0 
+#           and 100 inches in diameter. If you want to specify the units in millimeters, 
+#           then include an 'm' or 'mm' after the number (the program only looks for the first
+#           m, it is not possible to specify meters here). Thus a range of 100m-200m means all
+#           dies >= 99.99mm and <= 200.01mm, since there is 0.01mm tolerance factor built
+#           into the value testing. To match a part excactly (within the 0.01mm tolerance) then
+#           specify just a single number without a range. 
+#     4     PART: this can be either *, or one or more part designation characters. The 
+#           characters are mapped as follows (these are not exactly like decade but it 
+#           gets rid of the confusion of 0 and O for bolsters. Also, there are extra 
+#           types defined beyond what we will be using initially in anticipation of 
+#           future expansion of the code set. 
+#                The characters are capitalized before processing. 
+#                
+#                F - feeder
+#                M - mandrel 
+#                P - plate 
+#                B - backer 
+#                K - sub backer (these don't exist in the system yet)
+#                L - bolster 
+#                S - sub bolster 
+#                R - ring 
+#                I - insert (generic)
+#                A - plate insert
+#                C - mandrel insert
+#                T - bolt. 
+#
+#            In the future if we need to expand the part definition set we can make parts
+#            case sensitive, thus it is a good idea to define all parts capitalized. 
+#
+#            If a * is defined then no other parts should be included since they will
+#            be ignored. 
+#
+#       ALL REMAINING FIELDS MUST MATCH THE RESPECTIVE DATA WITHIN THE SOLARSOFT TABLES
+#        (EXCEPT FOR THE FUNCTION FIELD)
+#
+#     1     FUNCTION: this can be exactly one of ADD, DEL, or MOD (variations are not allowed)
+#     2     SEQ#: this must match the sequence number required by solarsoft. If you are 
+#           adding a new routing entry, then it is possible to define a sequence number
+#           which does not exist within the standard routing definitions in table METHDR  
+#     3     DEPT: department as defined in solarsoft, see 'DEPTS' table, this is the 2 letter
+#           code without the plant code prefix
+#     4     RESOURCE: as defined in table.field RESRE.ABRESC, 3 letter code
+#     5     OPERATION: operation code as defined in OPCODE.AECODE  (3 chars)
+#     6     RUN STANDARD: the number of hours required for operation as floating point number
+#     7     STATUS: will always be N (this may change later)
+#     8     REPORTING: always set to N unless this is supposed to be tracked at a solarsoft
+#           terminal whereby the stock serial number needs to be entered (not sure about 
+#           this, might have to be a Y)
+#
+#    Note that all the Solarsoft specific codes must be valid for the active plant. You 
+#    cannot reference an OPCODE from a different plant for example since solarsoft doesn't
+#    allow this. 
+#  
+# Condition rows are defined as follows:
+#   
+#    [{FEAT,}OPT  ; CUSTOMER ; DIAMETER ; PART {; CONTINUE}]
+#    [!{FEAT,}OPT  ; CUSTOMER ; DIAMETER ; PART {; CONTINUE}]
+#
+# and the action or data record within a condition has the following format
+#
+#    FUNC; SEQ#; DEPT; RES; OPER; TIME; STAT; REPORT
+#
+#   Note it is the lead '[' character that distinguishes the two types or rows. 
+#
+# If the condition starts with [! then this is an inverted condition rule
+# meaning that the rule will apply if the feature/option does not exist. 
+# An example of this type of rule would be hardened blank, whereby the 
+# hardened blank exists within the standard routing, but if the feature/option
+# hardened blank does not exist, then we want to delete hardened blank 
+# routing steps. 
+#
+# For now the RES and OPER definitions are not used in DEL commands for 
+# record matching purposes. Only the sequence number and dept must match
+# for the record to be deleted. 
+#
+# The word CONTINUE in the conditional statement row is an optional keyword, 
+# only the keyword CONTINUE is recognized. If defined, then it means that this 
+# is a non-terminating condition. Thus if this condition matches, then the
+# contained RTE records would be processed and included for the part, but 
+# instead of stopping, the program will continue to search for matching
+# condition records. If CONTINUE is not defined then a matching condition 
+# completes the processing (all RTE definition records in the matching 
+# condition are loaded and then processing stops). 
+#
+# If a job has no features and options, then only the global wildcard type 
+# conditions could ever match in this case. You can define multiples of 
+# these so long as the type is CONTINUE and they will all be processed. 
+#
+# ----------------------------------------------------------------------
+#
+# To deal with special types of situations the conditions can also be 
+# extended through a '[~n' type designator at the start. For now only
+# a type 1 is defined and is used to allow for changing single sub part 
+# routing data. For example, if an order comes in for a new plate to 
+# match an existing mandrel, the sales people will enter that part 
+# directly as opposed to selected the entire hollow die part (this is 
+# how Markham has been operating at least). When this happens there is 
+# no CAD/CAM or inpsection routing data for this part, and this now needs
+# to be added. This requires a special rule. 
+# 
+# These rules are very simple for now and are defined as follows:
+#
+#    [~n; PART]
+#
+#  IMPORTANT: There can't be a space between ~ (tilde character) and n, 
+#  it must be "~1" and not "~ 1" for example.
+#
+#  If we need to make the above more specific this can be added as 
+#  a future extension. 
+#
+#  Thus if an 'HD 10 X 6 PLATE' part exists as an order item then 
+#  the following rule would match
+#    [~1; P]
+#
+#  There is an example in this file of how to modify CAD/CAM for 
+#  plates, mandrels, and backers. 
+#
+# ====================================================================
+# Actual file is show below with some possible examples commented out. 
+# This is the run file being used for testing at Markham. All we are 
+# really doing is deleting a bunch of operations and cleaning up the 
+# nitriding. The other rules that are commented out are examples 
+# used for testing only. 
+#
+# [{FEAT,}OPT  ; CUSTOMER ; DIAMETER ; PART {; CONTINUE} ]
+# FUNC; SEQ#; DEPT; RES; OPER; TIME; STAT; REPORT
+#
+# [TRIPLE SKIM   ;     *    ; 0-999    ; P   ; CONTINUE  ]
+# ADD   ; 152 ; WI  ; WE3; WIR ; 3.75; N   ;   N
+
+# [HEAT SINK 100 ;     *    ; 0-999    ; P   ; CONTINUE  ]
+# ADD   ; 153 ; WI  ; WE3; WIR ; 6.00; N   ;   N
+
+#[MULTI         ;     *    ; 0-999    ; M   ; CONTINUE  ]
+# ADD   ;  84 ; ED  ; S10; EDM ; 5.00; N   ;   N
+
+# [CENTRE FEED   ;     *    ; 0-999    ; M   ; CONTINUE  ]
+# ADD   ;  82 ; MM  ; MM1; MM  ; 2.00; N   ;   N
+
+# [POCKET CHARGE ;     *    ; 0-999    ; P   ; CONTINUE  ]
+# ADD   ;  81 ; M1  ; MCNN; CM  ; 0.12 ; N   ;   Y
+
+#[*,ONE PIECE   ;     *    ; 0-999    ; M   ; CONTINUE  ]
+# ADD   ;  73 ; M1  ; MC1; NC  ; 3.10; N   ;   N
+
+# Global delete grinding and sand blasting operations
+[*,*           ;     *    ; 0-999    ; *  ; CONTINUE ] 
+DEL   ;  0 ; GR  ; *  ; GR  ; 0.0 ; N   ;  N
+DEL   ;  0 ; HT  ; *  ; SB  ; 0.0 ; N   ;  N
+DEL   ;  0 ; L2  ; *  ; RE  ; 0.0 ; N   ;  N
+
+
+# If nitriding is not defined then delete it. 
+# NOTE: a sequence number of * or 0 will match any sequence number with the same 
+# DEPT definition. 
+[! NITRID      ;     *    ; 0-999    ; MP ; CONTINUE  ]
+DEL   ;  *  ; NI  ; N1  ; NI  ; 0.0 ;  MP   ;  N
+
+# Delete NI for hardened blanks. 
+[ HARDENED  ;     *    ; 0-999    ; *  ; CONTINUE ]
+DEL   ;  *  ; NI  ; N1  ; NI  ; 0.0 ;  MP   ;  N
+
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# Special case rules. 
+# ==================
+# A special case rule is defined by [~ followed by a rule code or number.
+# for now only rule 1 is defined, and as more are added n will be 
+# incremented to designate those new rules. 
+#
+# n For the single sub-parts is 1 thus [~1 defines these records.
+#
+# Add CAD/CAM and Inspection for single mandrel, plates, and backers
+#    FUNC; SEQ#; DEPT; RES; OPER; TIME; STAT; REPORT
+# Note these should be repeat jobs so the CAD/CAM times are reduced 
+# from normal to 15 minutes each. The MP handles both Mandrels and 
+# plates and a different rule handles the backers (we could have 
+# included the backers in the same rule as the mandrel and plates in 
+# this case, but to show that these can be split up we do so for this
+# example.) You cannot use a wildcard character for the part, you must
+# designate each part desired. 
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[~1; MP]
+ADD   ;  10 ; CD  ; EMPL; SHP  ; 0.15 ; N   ;   Y
+ADD   ;  20 ; CD  ; EMPL; CAD  ; 0.25 ; N   ;   Y
+ADD   ;  30 ; CM  ; EMPL; CAM  ; 0.25 ; N   ;   Y
+ADD   ; 500 ; IN  ; EMPL; INS  ; 1.00 ; N   ;   Y
+
+[~1; B]
+ADD   ;  10 ; CD  ; EMPL; SHP  ; 0.15 ; N   ;   Y
+ADD   ;  20 ; CD  ; EMPL; CAD  ; 0.25 ; N   ;   Y
+ADD   ;  30 ; CM  ; EMPL; CAM  ; 0.25 ; N   ;   Y
+ADD   ; 500 ; IN  ; EMPL; INS  ; 1.00 ; N   ;   Y

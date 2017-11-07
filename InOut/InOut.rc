@@ -1,0 +1,318 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\InOut.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\InOut.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_INOUT_DIALOG DIALOGEX 0, 0, 359, 234
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "InOut"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_MSCOMM1,"{648A5600-2C6E-101B-82B6-000000000014}",
+                    WS_TABSTOP,9,90,25,23
+    CONTROL         "",IDC_MSCOMM2,"{648A5600-2C6E-101B-82B6-000000000014}",
+                    WS_TABSTOP,9,66,25,23
+    EDITTEXT        IDC_PROMPT,15,204,326,23,ES_CENTER | ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    EDITTEXT        IDC_EMPLOYEENUMBER,53,7,76,20,ES_AUTOHSCROLL
+    RTEXT           "EMP#:",IDC_EMP_LABEL,7,7,40,20,SS_CENTERIMAGE
+    EDITTEXT        IDC_SONUMBER,53,28,76,20,ES_AUTOHSCROLL
+    RTEXT           "SO #:",IDC_SO_LABEL,7,30,40,20,SS_CENTERIMAGE
+    EDITTEXT        IDC_FEEDBACK,194,7,158,42,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    PUSHBUTTON      "SI - Shape IN",IDC_SI_BUTTON,46,103,70,20
+    PUSHBUTTON      "SR - Shape Return",IDC_SR_BUTTON,195,103,69,20
+    PUSHBUTTON      "SH - Shape OUT",IDC_SH_BUTTON,269,103,69,20
+    PUSHBUTTON      "SX - Sales Return",IDC_SX_BUTTON,161,54,69,20
+    PUSHBUTTON      "DI - Design IN",IDC_DI_BUTTON,46,126,69,20
+    PUSHBUTTON      "DR - Design Return",IDC_DR_BUTTON,196,126,69,20
+    PUSHBUTTON      "DD - Design OUT",IDC_DD_BUTTON,270,126,69,20
+    PUSHBUTTON      "CI - CAM IN",IDC_CI_BUTTON,46,149,69,20
+    PUSHBUTTON      "CR - CAM Return",IDC_CR_BUTTON,196,149,69,20
+    PUSHBUTTON      "CO - CAM OUT",IDC_CO_BUTTON,270,149,69,20
+    PUSHBUTTON      "SA - Sales Release",IDC_SA_BUTTON,235,54,69,20
+    PUSHBUTTON      "PX - Plant Error",IDC_PX_BUTTON,159,176,69,20
+    PUSHBUTTON      "Ask Customer",IDC_CUST_BUTTON,85,54,69,20
+    PUSHBUTTON      "1% IN",IDC_1PCTIN_BUTTON,46,78,69,20
+    PUSHBUTTON      "Design PAUSE",IDC_DIPAUSE_BUTTON,121,127,69,20
+    PUSHBUTTON      "CAM PAUSE",IDC_CIPAUSE_BUTTON,121,149,69,20
+    PUSHBUTTON      "1% OUT",IDC_1PCTOUT_BUTTON,269,78,69,20
+    PUSHBUTTON      "Shape PAUSE",IDC_SHPAUSE_BUTTON2,121,103,69,20
+END
+
+IDD_TASKTYPE_DLG DIALOG DISCARDABLE  0, 0, 236, 114
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "TaskType"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Button1",IDC_TASK1_BUT,22,85,58,18
+    EDITTEXT        IDC_MSG_EDIT,6,5,221,74,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "Button2",IDC_TASK2_BUT,87,85,58,18
+    PUSHBUTTON      "Button3",IDC_TASK3_BUT,152,85,58,18
+END
+
+IDD_ERROR_DLG DIALOG DISCARDABLE  0, 0, 432, 310
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Error and Job Notes"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "SO#:",IDC_STATIC,8,6,42,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_SONUM,56,6,91,15,ES_AUTOHSCROLL
+    RTEXT           "Your employee #:",IDC_STATIC,11,26,86,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EMPNUM,102,26,45,15,ES_AUTOHSCROLL
+    RTEXT           "Responsible employee #:",IDC_STATIC,9,44,88,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_ERREMPNUM,102,44,45,15,ES_AUTOHSCROLL
+    RTEXT           "Part:",IDC_STATIC,13,67,40,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_PART_EDIT,55,67,33,15,ES_AUTOHSCROLL
+    CONTROL         "ALL",IDC_ALL_RADIO,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,104,68,33,11
+    CONTROL         "FDR",IDC_FDR_RADIO,"Button",BS_AUTORADIOBUTTON,14,88,33,
+                    11
+    CONTROL         "MND",IDC_MND_RADIO,"Button",BS_AUTORADIOBUTTON,59,87,33,
+                    11
+    CONTROL         "PLT",IDC_PLT_RADIO,"Button",BS_AUTORADIOBUTTON,104,87,
+                    33,11
+    CONTROL         "BKR",IDC_BKR_RADIO,"Button",BS_AUTORADIOBUTTON,14,104,
+                    33,11
+    CONTROL         "BOL",IDC_BOL_RADIO,"Button",BS_AUTORADIOBUTTON,59,104,
+                    33,11
+    CONTROL         "SBOL",IDC_SBOL_RADIO,"Button",BS_AUTORADIOBUTTON,104,
+                    104,33,11
+    CONTROL         "DRING",IDC_DRING_RADIO,"Button",BS_AUTORADIOBUTTON,14,
+                    121,38,11
+    CONTROL         "INS",IDC_INS_RADIO,"Button",BS_AUTORADIOBUTTON,59,121,
+                    33,11
+    CONTROL         "CUSTOM",IDC_CUSTOM_RADIO,"Button",BS_AUTORADIOBUTTON,
+                    104,121,44,11
+    RTEXT           "Severity:",IDC_STATIC,6,148,85,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_SEVERITY,101,148,45,15,ES_AUTOHSCROLL | WS_GROUP
+    CONTROL         "List1",IDC_ERRORS,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,156,21,130,
+                    190
+    CONTROL         "List1",IDC_ACTIONS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,292,21,130,190
+    LTEXT           "Notes:",IDC_STATIC,34,204,29,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_NOTE,34,222,360,60,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    WS_VSCROLL
+    PUSHBUTTON      "Save",IDC_SAVE,117,290,90,14
+    PUSHBUTTON      "Clear",IDC_CLEAR,227,290,90,14
+    LTEXT           "Error",IDC_STATIC,158,10,42,10,SS_CENTERIMAGE
+    LTEXT           "Corrective Action",IDC_STATIC,293,10,64,10,
+                    SS_CENTERIMAGE
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "InOut MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "InOut\0"
+            VALUE "LegalCopyright", "Copyright (C) 2004\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "InOut.EXE\0"
+            VALUE "ProductName", "InOut Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_INOUT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 352
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 227
+    END
+
+    IDD_TASKTYPE_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_ERROR_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 425
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 303
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_INOUT_DIALOG DLGINIT
+BEGIN
+    IDC_MSCOMM1, 0x376, 102, 0
+0x0013, 0x0000, 0x0043, 0x006f, 0x0070, 0x0079, 0x0072, 0x0069, 0x0067, 
+0x0068, 0x0074, 0x0020, 0x0028, 0x0063, 0x0029, 0x0020, 0x0031, 0x0039, 
+0x0039, 0x0034, 0x0020, 0x4321, 0x1234, 0x0008, 0x0000, 0x03ed, 0x0000, 
+0x03ed, 0x0000, 0x5601, 0x648a, 0x0000, 0x0006, 0x0000, 0x0001, 0x0400, 
+0x0000, 0x0200, 0x0000, 0x2580, 0x0000, 0x0000, 0x0007, 0x0002, 0x0000, 
+0x0000, 0x0000, 0x003f, 0x0000, 0x0001, 0x0000, 
+    IDC_MSCOMM2, 0x376, 102, 0
+0x0013, 0x0000, 0x0043, 0x006f, 0x0070, 0x0079, 0x0072, 0x0069, 0x0067, 
+0x0068, 0x0074, 0x0020, 0x0028, 0x0063, 0x0029, 0x0020, 0x0031, 0x0039, 
+0x0039, 0x0034, 0x0020, 0x4321, 0x1234, 0x0008, 0x0000, 0x03ed, 0x0000, 
+0x03ed, 0x0000, 0x5601, 0x648a, 0x0000, 0x0006, 0x0000, 0x0002, 0x0400, 
+0x0000, 0x0200, 0x0000, 0x2580, 0x0000, 0x0000, 0x0007, 0x0002, 0x0000, 
+0x0000, 0x0000, 0x003f, 0x0000, 0x0001, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About InOut..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\InOut.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

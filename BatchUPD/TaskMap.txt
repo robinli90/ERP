@@ -1,0 +1,283 @@
+# BAAL TaskMap mapping from Decade to Solarsoft
+#
+# lines starting with # are treated as comments and ignored. 
+#
+# This is a sample task code map definition file used to translate Decade task
+# codes to sequence numbers within the routing steps in solarsoft. 
+#
+# There is a separate task map file for each of the plants so that they can 
+# be maintained independently.
+#
+#
+# There are 5 fields and one optional field as follows:
+#   DECADE_TASK[-STOPTASK], DECADE_PART, MODE, CMS_OPCODE, CMS_SEQ#  [,WHERE] 
+#
+#   OPCODE is from  OPCODE table
+#   SEQ#   is from  METHDR table
+#
+# The MODE field indicates the type of tracking events that are to 
+# be sent to solarsoft. If mode = START, then an 10151 event is sent
+# to solarsoft indicating that a machine has started working on a
+# specific part. A mode of NEXT means that the machine has loaded the 
+# next part and it defines that part as complete the moment that it is
+# loaded onto the machine. This is to support the current method of 
+# operation for those machines where the barcode tracking only occurs
+# when the part is loaded onto the machine and nowhere else. This will 
+# report the 40005 event early but doesn't increase the amount of 
+# tracking workload for the operator. 
+#
+# If mode = STOP, then a 10100 event is sent to solarsoft to indicate that
+# the machine has stopped working on the part. If MODE = COMPLETE
+# then a 10100 event and a 40005 event is sent to solarsoft to indicate 
+# the machine is done and that the part has been completed. 
+#
+# The final possible mode is TRACK which outputs a 40005 event code only
+# so that the part production event is tracked.
+#
+# These can be extended as required to create special sets of data tracking.
+#
+#   MODE            EVENTS SENT
+# =================================================
+#   START           10151, 20000
+#   NEXT            10151, 20000, 40005
+#   STOP            20009, 10100 
+#   COMPLETE        40005, 20009, 10100
+#   TRACK           40005
+#
+# Note: The sequence 10151, 40005, 10100 must be used if the 10100 down code
+# is going to be used. Attempting to do 40005 while the resource is not in 
+# the run state causes an error condition, and will not report any production. 
+#
+# 20000 events are output along with the 10151 automatically simply to track
+# the employee that has loaded/started the job. Labour rates are set to zero 
+# in the system (for now at least) so will not impact the financials. 
+# Similarily, a 20009 is output along with the 10100 event. 
+#
+# WHERE  one of {B,S,D}
+#
+# The optional last field WHERE indicates which system to track the event
+# to. Normal processing will dump the event into decade and if valid data 
+# exists within the Solarsoft setup, then it will also be sent to the Solarsoft data
+# queue. If WHERE is not defined and no Solarsoft mapping exists, then no 
+# error message will be output to the log file. If WHERE is defined and is set
+# to either B or S (meaning output to Solarsoft), and the proper Solarsoft data
+# mapping does not exist to allow tracking the event, then an error message will 
+# be output to the log file. DO NOT include the square brackets [ ] around the 
+# where field.
+#
+# An example would be as follows:
+#
+#    MB,*,TRACK,      X,0, D
+#
+# Where this is the mandrel back check procedure at Markham which has nothing
+# to do with machine time. Because it will not be tracked in Solarsoft, the 
+# dummy placeholders of X and 0 are used for the OPCODE and SEQ# since these
+# are not used, but the fields must have something in them for the line to 
+# be read correctly. 
+#
+# 
+# The DECADE_TASK field must match to the task code defined 
+# in decade. The DECADE_PART can define a specific part side, just the part
+# of can be a wildcard applied to all parts. It is not possible to specify
+# a range of parts. Thus for example you could have for the mandrel front and
+# back milling and check operations:
+#
+#    NC,MF,START,    CM, 60
+#    MC,MF,COMPLETE, CM, 60
+#    NC,MB,START,    CM, 70
+#    MB,MB,COMPLETE, CM, 70
+#
+#
+# The manual mandrel milling operations might look like
+#
+#    MM,M,TRACK,     MM, 80
+#
+# Where in the above sample the manual mill simply tracks the completion 
+# of the operation with a 40005 event and doesn't require a machine run
+# time for the part. A machine run time for the part could be defined in 
+# this case, but then the person doing the manual mill operation would 
+# have to track when they start the job and when they complete the job. 
+# 
+# Notice also that only an M is used as the part designator. The program 
+# will attempt to match the most specific TASK,PART combination when there
+# are multiple tasks for the same part. You shouldn't define two taskmap
+# records with the same level of detail that would map to the same thing
+# since in this case there is no way to guarantee which one will get 
+# processed. 
+# To specify a wildcard part use * as the part designator, as in this
+# example: 
+#
+#   IC,*,TRACK,     INS, 180
+#
+# For some operations the SEQ# might vary for different part types. In 
+# this situation you should enter 0 for the sequence number, which will
+# force the system to do a SEQ# lookup based on the OPCODE definition. 
+# This will only work if the OPCODE and the DEPT code make a unique pair
+# for the operation so that only a single sequence number matches. 
+# Keep in mind this will put a greater load on the DB server, so try
+# to define as few SEQ#'s as possible with a value of 0. Also keep in 
+# mind that the DEPT code used in the lookup is taken from the 
+# station mapping reference derived from the StationMap.txt file. So if
+# the seq# is 0 and the station map data is not unique or is invalid, then 
+# the data sent to Solarsoft will most likely be invalid and thus will not
+# be accepted by the Solarsoft system. 
+# 
+# If you want to see the runtime data within the Decade d_task table 
+# then a secondary stop task has to be matched to the start task in 
+# order to do the time delta calculation. In this case you need to 
+# define the matching Runtime Termination task by adding a dash and then 
+# the matching task after the initial task. Thus any task that will have 
+# a matching RUNTIME type record must be in the form:
+#   
+#    ST-ET,DECADE_PART,START,  CMS_OPCODE, CMS_SEQ#  [,WHERE] 
+#
+# Note that the task processing mode must be START in this case, and the 
+# second task will automatically be interpreted as the COMPLETE task
+# So for example, say the wire department is using W0 and W1 as the start
+# and stop tasks and W1 is used as the RUNTIME record stop task. Then 
+# the following would might be defined:
+#
+#    W1-W0,P,START,  WIR, 260, S
+#
+# which would handle W1 start times and W0 as stop times and would only
+# be tracked in Solarsoft.  
+#  
+#
+
+SI,*,START,     X, 0, D
+SH,*,COMPLETE,  X, 0, D
+
+DI,*,START,     X, 0, D
+DD,*,COMPLETE,  X, 0, D
+
+# CI,*,START,     X, 0, D
+# CO,*,COMPLETE,  X, 0, D
+
+CI,*,Start,	CAM, 30
+CO,*,COMPLETE,	CAM, 30
+
+C1-C2,*,START,  SHP, 10, S
+C3-C4,*,START,  CAD, 20, S
+C5-C6,*,START,  CAM, 30, S
+
+SW,*,COMPLETE,  SAW, 100, S
+
+L1-L0,*,START,  TUR, 160
+
+N1-N0,BB,START, CM1, 180
+N1-N0,BF,START, CM1, 190
+N1-N0,PB,START, CM1, 180
+N1-N0,PF,START, CM1, 190
+N1-N0,MF,START, CM1, 180
+N1-N0,MB,START, CM1, 190
+N1-N0,MG,START, X, 0, D
+
+# N1-N0,XX,START, CM2, 430
+# N1-N0,BX,START, CM2, 430
+# N1-N0,PX,START, CM2, 430
+# N1-N0,MX,START, CM2, 430
+
+NC,BB,NEXT,     X, 0, D
+NC,BF,NEXT,     X, 0, D
+NC,PF,START,    X, 0, D
+NC,PB,START,    X, 0, D
+NC,MF,START,    X, 0, D
+NC,MB,START,    X, 0, D
+
+PC,P,COMPLETE,  X, 0, D
+PB,P,COMPLETE,  X, 0, D
+MC,M,COMPLETE,  X, 0, D
+MB,M,COMPLETE,  X, 0, D
+
+DS,B,NEXT,      DS,  240
+DS,P,NEXT,      DS,  240
+DS,M,NEXT,      DS,  240
+
+LS,B,NEXT,      DS,  173
+LS,P,NEXT,      DS,  173
+LS,M,NEXT,      DS,  173
+
+MM-M0,M,START,  MM,  210
+
+DU,M,NEXT,      DU,  230
+FL,*,NEXT,      FC,  250
+
+# Pre-heat
+PH,*,NEXT,      HP,  320 
+
+# Hardening
+HD,*,NEXT,      HD,  330
+
+# First draw
+D1,*,NEXT,      D1,  340
+
+# Second draw
+D2,*,NEXT,      D2,  350
+
+# Third draw
+D3,*,NEXT,      D3,  360
+
+SB,*,NEXT,      SB,  390
+
+# ?????
+# RC,MN,NEXT,     REM,300
+# RC,MB,NEXT,     REM,320
+# LF,*,NEXT,      RE, 0
+
+SE-S0,M,START,  EDM, 460
+
+WE-W0,P,START,  WIR, 470
+#WE-W0,P,START,  WIR, 470
+
+
+# DECADE ONLY EVENTS
+CM,*,TRACK,      X,0, D
+PR,*,TRACK,      X,0, D
+CL,*,TRACK,      X,0, D
+IN,*,TRACK,      X,0, D
+AM,*,TRACK,      X,0, D
+AS,*,TRACK,      X,0, D
+BB,*,TRACK,      X,0, D
+CB,*,TRACK,      X,0, D
+CC,*,TRACK,      X,0, D
+CH,*,TRACK,      X,0, D
+CP,*,TRACK,      X,0, D
+CR,*,TRACK,      X,0, D
+CS,*,TRACK,      X,0, D
+DP,*,TRACK,      X,0, D
+DR,*,TRACK,      X,0, D
+EL,*,TRACK,      X,0, D
+GA,*,TRACK,      X,0, D
+GD,*,TRACK,      X,0, D
+HC,*,TRACK,      X,0, D
+HL,*,TRACK,      X,0, D
+ID,*,TRACK,      X,0, D
+IP,*,TRACK,      X,0, D
+LC,*,TRACK,      X,0, D
+LF,*,TRACK,      X,0, D
+LO,*,TRACK,      X,0, D
+LR,*,TRACK,      X,0, D
+ML,*,TRACK,      X,0, D
+PG,*,TRACK,      X,0, D
+PO,*,TRACK,      X,0, D
+PR,*,TRACK,      X,0, D
+RF,*,TRACK,      X,0, D
+RK,*,TRACK,      X,0, D
+RL,*,TRACK,      X,0, D
+SA,*,TRACK,      X,0, D
+SC,*,TRACK,      X,0, D
+SR,*,TRACK,      X,0, D
+SX,*,TRACK,      X,0, D
+TB,*,TRACK,      X,0, D
+VW,*,TRACK,      X,0, D
+WC,*,TRACK,      X,0, D
+WS,*,TRACK,      X,0, D
+WO,*,TRACK,      X,0, D
+
+ 
+#IS,*,START,      INS, 780
+#IC,*,COMPLETE,      INS, 780
+NS,*,NEXT,          NI, 790
+IB,*,START,	INS, 780
+IF,*,COMPLETE,	INS, 780
+

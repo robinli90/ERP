@@ -1,0 +1,7 @@
+<project outputDir="C:\Users\administrator\Desktop\Workspace\ERP - Actual\ExcoPricingTool\bin\ObfuscatedRelease\Confused" baseDir="C:\Users\administrator\Desktop\Workspace\ERP - Actual\ExcoPricingTool\bin\ObfuscatedRelease" xmlns="http://confuser.codeplex.com">
+  <module path="BouncyCastle.Crypto.dll" />
+  <module path="PdfSharp.Charting.dll" />
+  <module path="PdfSharp.dll" />
+  <module path="ExcoPricingTool.exe" />
+  <module path="ExcoPricingTool.vshost.exe" />
+</project>

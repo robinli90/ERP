@@ -1,0 +1,136 @@
+ 1/26/09   22:30:29   Shop Floor - Feature 40005 Template                Page:
+==============================================================================
+  File:    SF40005W   Trigger buffer length:  308                             
+  Library: CMSPD           Number of fields:   18                             
+  Record:  SF40005R           Record length:   88                             
+  Comments..                                                                  
+      2002-03-14 HHW  Change 'Feature' to 'Event'                             
+      2002-06-04  IH   Change quantity field from 8.0 to 15.5                 
+                       Rename the orignal RQTY(8.0) to RQTYX                  
+                       Add new field RQTY(15.5) to the end of file            
+       SF40005W                                                               
+       READ first before changing this DDS.....................!!!            
+       This is a template file that is use to map field P8DATA                
+       in SFRF- Settings in Shopfloor event based reporting.                  
+       If you need to change the attribute of any existing field,             
+       please add a new field at the bottom and make the existing             
+      field obsolete. (write comments on top of it but do not                
+      remove the field) Add the word "Obsolete" in the column                
+      headings of the field.                                                 
+      Existing fields can have new values but its attribute                  
+      must not be changed. (length & type = numeric/alpha)                   
+      After adding a new field , you must write a conversion                 
+      program to transfer the values of this field to the                    
+      V5.0 format of SFRF.                                                   
+        ---------------------------------------------------------            
+        Example >>>>>  current DDS.. (Take note-this is example)             
+        ---------------------------------------------------------            
+             R SF40000R                                                      
+               X1SQTY         1A         COLHDG('Set' 'Quantity')            
+                                         1 - Zero                            
+                                         2 - Standard Pack                   
+                                         3 - Set Value                       
+               X1RQTY         8S 0       COLHDG('Set' 'Quantity')            
+                                         EDTCDE(3)                           
+               X1UNIT         3A         COLHDG('Units')                     
+               X1EQTY         1A         COLHDG('Edit' 'Quantity')           
+                                         1 - Yes Enabled                     
+                                         2 - No Disabled                     
+       If you need to change field X1RQTY to 15 (Set qty)                    
+       your new DDS should look like this...(take note                       
+       that no field will be commented out!!)                                
+             R SF40000R                                                      
+               X1SQTY         1A         COLHDG('Set' 'Quantity')            
+                                         1 - Zero                            
+                                         2 - Standard Pack                   
+                                         3 - Set Value                       
+               X1RQTYX        8S 0       COLHDG('Set Quantity')              
+                                                 'Obsolete')                 
+                                          EDTCDE(3)                           
+     ****   Formerly X1RQTY move Set quantity for size change                 
+                X1UNIT         3A         COLHDG('Units')                     
+                X1EQTY         1A         COLHDG('Edit' 'Quantity')           
+                                          1 - Yes Enabled                     
+                                          2 - No Disabled                     
+                X1RQTY        15S 0       COLHDG('Set' 'Quantity')            
+                                          EDTCDE(3)                           
+        Take note that you need to write a conversion program                 
+        to tansfer the value of the new field to V5.0 from 4.8                
+      2001-04-26  IH   Add material tolerance option                          
+ 1/26/09   22:30:29   Shop Floor - Feature 40005 Template                Page:
+==============================================================================
+  File:    SF40005W   Trigger buffer length:  308                             
+  Library: CMSPD           Number of fields:   18                             
+  Record:  SF40005R           Record length:   88                             
+  Comments..                                                                  
+      2002-02-19  LAW  Add description to material check                      
+      2006-07-20  JFUNG  Added fields X1BUNT                                  
+      2008-10-02 MUH  Added field X1PART, X1SEQN, X1JOBN and                  
+                      X1LOTN for batch execute mode                           
+==============================================================================
+  Field Description                    Bytes  From    To  Length Type Name    
+==============================================================================
+  Set Quantity                             1     1     1     1     A  X1SQTY  
+                                          1 - Zero                            
+                                          2 - Standard Pack                   
+                                          3 - Set Value                       
+  Set Quantity Obsolete                    8     2     9     8.0   S  X1RQTYX 
+      size changed: former field of X1RQTY                                    
+  Units                                    3    10    12     3     A  X1UNIT  
+  Edit Quantity                            1    13    13     1     A  X1EQTY  
+                                          1 - Yes Enabled                     
+                                          2 - No Disabled                     
+  Display Verification                     1    14    14     1     A  X1DVER  
+                                          1 - Display verification screen     
+                                          2 - Do not display verification     
+  Check Material Loading                   1    15    15     1     A  X1CMTL  
+                                          1 - Check Material Loading List     
+                                              (Backflash Only)                
+                                          2 - Check Material Loading List     
+                                              (All Material)                  
+                                          3 - Check Backflash Material Loading
+                                              With Serial or Lot Control      
+                                          4 - Check All Material Loading With 
+                                              Serial or Lot Control           
+  Entry Time Edit Check                    1    16    16     1     A  X1TCHK  
+                                          1 - No Check                        
+                                          2 - Warn if not in range            
+                                          3 - Must be in reporting range      
+  Display Lot Assoc.                       1    17    17     1     A  X1DLTA  
+                                          1 - Display Lot Association Screen  
+                                          2 - Do not display                  
+  Create Employee Audits                   1    18    18     1     A  X1AUDT  
+                                          1 - Create Employee Audits          
+                                          2 - Do not create                   
+  Execution Mode                           1    19    19     1     A  X1EMOD  
+                                          1 - One Time                        
+                                          2 - Continuous                      
+  Check Labour List                        1    20    20     1     A  X1LCHK  
+                                          1 - Check Resource Labour List      
+                                          2 - Do not Check                    
+  Material Tolerance                       4    21    24     4.1   S  X1MTTL  
+  Set Quantity                            15    25    39    15.5   S  X1RQTY  
+  Allow Blank Unit of Measure              1    40    40     1     A  X1BUNT  
+                                          1 - Allow                           
+                                          2 - Do not Allow                    
+  Part Number                             20    41    60    20     A  X1PART  
+         Part number used only for batch execute mode                         
+ 1/26/09   22:30:29   Shop Floor - Feature 40005 Template                Page:
+==============================================================================
+  File:    SF40005W   Trigger buffer length:  308                             
+  Library: CMSPD           Number of fields:   18                             
+  Record:  SF40005R           Record length:   88                             
+==============================================================================
+  Field Description                    Bytes  From    To  Length Type Name    
+==============================================================================
+         Do not prompt in feature detail maintenance                          
+  Sequence Number                          3    61    63     3.0   S  X1SEQN  
+         Sequence number used only for batch execute mode                     
+         Do not prompt in feature detail maintenance                          
+  Job Number                              10    64    73    10     A  X1JOBN  
+         Job number used only for batch execute mode                          
+         Do not prompt in feature detail maintenance                          
+  Lot Number                              15    74    88    15     A  X1LOTN  
+         Lot number used only for batch execute mode                          
+         Do not prompt in feature detail maintenance                          
+==============================================================================

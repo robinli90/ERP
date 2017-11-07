@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    
+    max-width: 220px;
+    border: 2px solid black;
+    border-collapse: collapse;
+    
+}
+</style>
+</head>
+<body>
+<table>
+
+<tr>
+<th>Job Number</th>
+<th>Customer PO#</th>
+<th>Delivery Date</th>
+<th colspan=5>Pricing Detail</th>
+</tr>
+
+<tr>
+<td rowspan=6><center>903202/16</center></td>
+<td rowspan=6><center>FRANK</center></td>
+<td rowspan=6><center>3/11/2015</center></td>
+<td style="border:0"><center><b><u>Die#</u></b></center></td>
+<td style="border:0"><b><u>Description</u></b></td>
+<td style="border:0"><center><b><u>Qty</u></b><center></td>
+<td style="border:0"><center><b><u>Unit</u></b></center></td>
+<td style="border:0"><b><u>Extended</u></b></td>
+</tr>
+
+<tr cellpadding=100;>
+<td style="border:0">903202/16</td>
+<td style="border:0">HOLLOW DIE 10 X 6 (2 CAV)</td>
+<td style="border:0"><center>1</center></td>
+<td style="border:0">$1,480.00</td>
+<td style="border:0">$1,480.00</td>
+</tr>
+
+<tr>
+<td style="border:0"></td>
+<td style="border:0"></td>
+<td style="border:0"></td>
+<td style="border:0"><b><u>Sub Total</u></b></td>
+<td style="border:0">$1,480.00</td>
+</tr>
+
+<tr>
+<td style="border:0"></td>
+<td style="border:0"></td>
+<td colspan=2 style="border:0"><b><u>Steel Surcharge</u></b></td>
+<td style="border:0">$94.69</td>
+</tr>
+
+<tr>
+<td style="border:0"></td>
+<td style="border:0"></td>
+<td style="border:0"></td>
+<td style="border:0"><b><u>Freight</u></b></td>
+<td style="border:0">$67.20</td>
+</tr>
+
+<tr>
+<td style="border:0"></td>
+<td style="border:0"></td>
+<td style="border:0"></td>
+<td style="border:0"><b><u>Total</u></b></td>
+<td style="border:0">$1,5399.89</td>
+</tr>
+
+</table>
+</body>
+</html>

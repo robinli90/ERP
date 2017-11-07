@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4C622A39-C7B1-44A6-BE1C-D2C5A4FAA400}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IncomeStatementReport</RootNamespace>
+    <AssemblyName>IncomeStatementReport</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>Y:\sales report\income statement report\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>160</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'X64|x86'">
+    <OutputPath>bin\x86\X64\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'X64|x64'">
+    <OutputPath>bin\x64\X64\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>DC1F251026EFCAC4E116FB75FB1EB958E0D4C50D</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>IncomeStatementReport_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ObfuscatedRelease|x86'">
+    <OutputPath>bin\x86\ObfuscatedRelease\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ObfuscatedRelease|x64'">
+    <OutputPath>bin\x64\ObfuscatedRelease\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExcoUtility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExcoUtility\bin\Release\ExcoUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Categories\Account.cs" />
+    <Compile Include="Categories\Cost of Steels\Cost of Goods Burden.cs" />
+    <Compile Include="Categories\Cost of Steels\Cost of Goods Material.cs" />
+    <Compile Include="Categories\Cost of Steels\Freight and Duty in.cs" />
+    <Compile Include="Categories\Cost of Steels\Increase or Decrease WIP.cs" />
+    <Compile Include="Categories\Cost of Steels\InterCompany Purchases.cs" />
+    <Compile Include="Categories\Cost of Steels\Material Parts Non Inventory.cs" />
+    <Compile Include="Categories\Cost of Steels\Raw Material Steel Usage.cs" />
+    <Compile Include="Categories\Cost of Steels\Cost of Steels Reclass.cs" />
+    <Compile Include="Categories\Cost of Steels\SubContract Work.cs" />
+    <Compile Include="Categories\Cost of Steels\WIP Obsolescence.cs" />
+    <Compile Include="Categories\Delivery and Selling\Advertising Expense.cs" />
+    <Compile Include="Categories\Delivery and Selling\Air Fare.cs" />
+    <Compile Include="Categories\Delivery and Selling\Auto Operation Expense.cs" />
+    <Compile Include="Categories\Delivery and Selling\Depreciation Automobile.cs" />
+    <Compile Include="Categories\Delivery and Selling\Employee Benefits Sales.cs" />
+    <Compile Include="Categories\Delivery and Selling\Group Insurance Sales.cs" />
+    <Compile Include="Categories\Delivery and Selling\Non Deductible Expense Golf.cs" />
+    <Compile Include="Categories\Delivery and Selling\Sales Commissions.cs" />
+    <Compile Include="Categories\Delivery and Selling\Sales Salaries.cs" />
+    <Compile Include="Categories\Delivery and Selling\Selling and Travel Expenses.cs" />
+    <Compile Include="Categories\Delivery and Selling\Selling and Travel Meals and Entertainment.cs" />
+    <Compile Include="Categories\Delivery and Selling\Statutory Holiday Sales.cs" />
+    <Compile Include="Categories\Delivery and Selling\Vacation Pay Sales.cs" />
+    <Compile Include="Categories\Delivery and Selling\Workers Compensation Sales.cs" />
+    <Compile Include="Categories\Direct Labour\CAM Salaries.cs" />
+    <Compile Include="Categories\Direct Labour\Direct Labour Heat Treat.cs" />
+    <Compile Include="Categories\Direct Labour\Direct Labour Shop.cs" />
+    <Compile Include="Categories\Direct Labour\WIP Adjustment Labour.cs" />
+    <Compile Include="Categories\Factory Overhead\Factory Business Insurance.cs" />
+    <Compile Include="Categories\Factory Overhead\Factory Business Tax.cs" />
+    <Compile Include="Categories\Factory Overhead\CAD and CAM Supplies.cs" />
+    <Compile Include="Categories\Factory Overhead\CAD and CAM System Maintenance.cs" />
+    <Compile Include="Categories\Factory Overhead\CAD Salaries.cs" />
+    <Compile Include="Categories\Factory Overhead\Consulting Fees.cs" />
+    <Compile Include="Categories\Factory Overhead\Depreciation Building Improvement.cs" />
+    <Compile Include="Categories\Factory Overhead\Depreciation Building.cs" />
+    <Compile Include="Categories\Factory Overhead\Depreciation Furniture and Fixture.cs" />
+    <Compile Include="Categories\Factory Overhead\Depreciation Machine and Equipment.cs" />
+    <Compile Include="Categories\Factory Overhead\Depreciation Software.cs" />
+    <Compile Include="Categories\Factory Overhead\Depreciation Vehicles.cs" />
+    <Compile Include="Categories\Factory Overhead\Equipment Rentals.cs" />
+    <Compile Include="Categories\Factory Overhead\Factory Cleaning Expense.cs" />
+    <Compile Include="Categories\Factory Overhead\Factory Employee Benefits.cs" />
+    <Compile Include="Categories\Factory Overhead\Factory Group Insurance.cs" />
+    <Compile Include="Categories\Factory Overhead\Factory Rent.cs" />
+    <Compile Include="Categories\Factory Overhead\Factory Unclassified Expense.cs" />
+    <Compile Include="Categories\Factory Overhead\Freight and Duty out.cs" />
+    <Compile Include="Categories\Factory Overhead\Indirect Labour ISO IT Purchaser.cs" />
+    <Compile Include="Categories\Factory Overhead\Maintenance and Repair Building.cs" />
+    <Compile Include="Categories\Factory Overhead\Maintenance and Repair Equipment.cs" />
+    <Compile Include="Categories\Factory Overhead\Realty Tax.cs" />
+    <Compile Include="Categories\Factory Overhead\Research and Development.cs" />
+    <Compile Include="Categories\Factory Overhead\Shipping Supplies.cs" />
+    <Compile Include="Categories\Factory Overhead\Shop Air Fare.cs" />
+    <Compile Include="Categories\Factory Overhead\Shop Meals and Entertainment.cs" />
+    <Compile Include="Categories\Factory Overhead\Shop Supplies Expense.cs" />
+    <Compile Include="Categories\Factory Overhead\Shop Supplies Heat Treat.cs" />
+    <Compile Include="Categories\Factory Overhead\Shop Travel.cs" />
+    <Compile Include="Categories\Factory Overhead\Factory South America Travel.cs" />
+    <Compile Include="Categories\Factory Overhead\Statutory Holiday.cs" />
+    <Compile Include="Categories\Factory Overhead\SubContract.cs" />
+    <Compile Include="Categories\Factory Overhead\Supervisory Salaries.cs" />
+    <Compile Include="Categories\Factory Overhead\Tool Amortization.cs" />
+    <Compile Include="Categories\Factory Overhead\Tools Expense.cs" />
+    <Compile Include="Categories\Factory Overhead\Training and Development.cs" />
+    <Compile Include="Categories\Factory Overhead\Utilities Expense.cs" />
+    <Compile Include="Categories\Factory Overhead\Vacation Pay Expense.cs" />
+    <Compile Include="Categories\Factory Overhead\WIP Adjustment Overhead.cs" />
+    <Compile Include="Categories\Factory Overhead\Workers Compensation.cs" />
+    <Compile Include="Categories\General and Administration\Office Air Fare.cs" />
+    <Compile Include="Categories\General and Administration\Business Tax.cs" />
+    <Compile Include="Categories\General and Administration\Cell Phone Expense.cs" />
+    <Compile Include="Categories\General and Administration\Commercial Insurance.cs" />
+    <Compile Include="Categories\General and Administration\Office Depreciation Expense.cs" />
+    <Compile Include="Categories\General and Administration\Donations.cs" />
+    <Compile Include="Categories\General and Administration\EDC Insurance.cs" />
+    <Compile Include="Categories\Factory Overhead\Goodwill Amortization.cs" />
+    <Compile Include="Categories\General and Administration\Legal and Audit.cs" />
+    <Compile Include="Categories\General and Administration\Meal and Entertainment.cs" />
+    <Compile Include="Categories\General and Administration\Memberships and Subscriptions.cs" />
+    <Compile Include="Categories\General and Administration\Office Cleaning.cs" />
+    <Compile Include="Categories\General and Administration\Office Employee Benefits.cs" />
+    <Compile Include="Categories\General and Administration\Salaries.cs" />
+    <Compile Include="Categories\General and Administration\Office Group Insurance.cs" />
+    <Compile Include="Categories\General and Administration\Office Rent.cs" />
+    <Compile Include="Categories\General and Administration\Office Supplies.cs" />
+    <Compile Include="Categories\General and Administration\Other Expenses.cs" />
+    <Compile Include="Categories\General and Administration\Payroll Taxes.cs" />
+    <Compile Include="Categories\General and Administration\Postage.cs" />
+    <Compile Include="Categories\General and Administration\Recruitment Expense.cs" />
+    <Compile Include="Categories\General and Administration\Software Amortization.cs" />
+    <Compile Include="Categories\General and Administration\Office South America Travel.cs" />
+    <Compile Include="Categories\General and Administration\Office Statutory Holiday.cs" />
+    <Compile Include="Categories\General and Administration\Telephone Expense.cs" />
+    <Compile Include="Categories\General and Administration\Travel Expenses.cs" />
+    <Compile Include="Categories\General and Administration\Office Vacation Pay.cs" />
+    <Compile Include="Categories\General and Administration\Office Worker%27s Compensation.cs" />
+    <Compile Include="Categories\Group.cs" />
+    <Compile Include="Categories\Category.cs" />
+    <Compile Include="Categories\Other Expense and Income\Bad Debt Expense.cs" />
+    <Compile Include="Categories\Other Expense and Income\Bank Charges.cs" />
+    <Compile Include="Categories\Other Expense and Income\Captial Tax Expense.cs" />
+    <Compile Include="Categories\Other Expense and Income\Cash Discounts Earned.cs" />
+    <Compile Include="Categories\Other Expense and Income\Dividend Interest.cs" />
+    <Compile Include="Categories\Other Expense and Income\DPSP Expense.cs" />
+    <Compile Include="Categories\Other Expense and Income\Exchange Gain or Loss.cs" />
+    <Compile Include="Categories\Other Expense and Income\Gain or Loss on Asset Disposal.cs" />
+    <Compile Include="Categories\Other Expense and Income\Impuesto_a_La_Riqueza.cs" />
+    <Compile Include="Categories\Other Expense and Income\Incentive Bonus Expense.cs" />
+    <Compile Include="Categories\Other Expense and Income\Long Term Interest.cs" />
+    <Compile Include="Categories\Other Expense and Income\Miscellaneous Income or Expense.cs" />
+    <Compile Include="Categories\Other Expense and Income\Non Recurring Expenses.cs" />
+    <Compile Include="Categories\Other Expense and Income\Provision for Income Tax.cs" />
+    <Compile Include="Categories\Other Expense and Income\Reorganization and Severance Costs.cs" />
+    <Compile Include="Categories\Other Expense and Income\Severance.cs" />
+    <Compile Include="Categories\Other Expense and Income\Short Term Interest.cs" />
+    <Compile Include="Categories\Sales\Canada Sales Steel Surcharge.cs" />
+    <Compile Include="Categories\Sales\Canada Sales.cs" />
+    <Compile Include="Categories\Sales\Cash and  Volume Discount.cs" />
+    <Compile Include="Categories\Sales\Colombia Sales Steel Surcharge.cs" />
+    <Compile Include="Categories\Sales\Colombia Sales.cs" />
+    <Compile Include="Categories\Sales\Financial Income.cs" />
+    <Compile Include="Categories\Sales\Delivery Revenue.cs" />
+    <Compile Include="Categories\Sales\Europe Sales Steel Surcharge.cs" />
+    <Compile Include="Categories\Sales\Europe Sales.cs" />
+    <Compile Include="Categories\Sales\InterDivision Sales Steel Surcharge.cs" />
+    <Compile Include="Categories\Sales\InterDivision Sales.cs" />
+    <Compile Include="Categories\Sales\Mexico Sales Steel Surcharge.cs" />
+    <Compile Include="Categories\Sales\Mexico Sales.cs" />
+    <Compile Include="Categories\Sales\Pacific Rim Sales Steel Surcharge.cs" />
+    <Compile Include="Categories\Sales\Pacific Rim Sales.cs" />
+    <Compile Include="Categories\Sales\Scrap Sales.cs" />
+    <Compile Include="Categories\Sales\South America Sales Steel Surcharge.cs" />
+    <Compile Include="Categories\Sales\South America Sales.cs" />
+    <Compile Include="Categories\Sales\USA Sales Steel Surcharge.cs" />
+    <Compile Include="Categories\Sales\USA Sales.cs" />
+    <Compile Include="ExcelWriter.cs" />
+    <Compile Include="FormConfigPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfigPanel.Designer.cs">
+      <DependentUpon>FormConfigPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categories\Plant.cs" />
+    <Compile Include="Process.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormConfigPanel.resx">
+      <DependentUpon>FormConfigPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IncomeStatementReport_TemporaryKey.pfx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

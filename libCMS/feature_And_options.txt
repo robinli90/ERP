@@ -1,0 +1,133 @@
+EXTRA CHRG                     BOLTS
+INDALEX CA                     BOLTS
+INDALEX US                     BOLTS
+EXTRA CHRG                     BOLTS - NC
+CAVITIES                       HOLES
+EXTRA CHRG                     KEYWAYS
+INDALEX CA                     KEYWAYS
+INDALEX US                     KEYWAYS
+EXTRA CHRG                     MISC
+INDALEX CA                     MISC
+INDALEX US                     MISC
+EXTRA CHRG                     N2 GROOVES BA
+INDALEX CA                     N2 GROOVES BA
+INDALEX US                     N2 GROOVES BA
+EXTRA CHRG                     TAPER CUT
+INDALEX CA                     TAPER CUT BACKER
+INDALEX US                     TAPER CUT BACKER
+EXTRA CHRG                     N2 GROOVES BO
+INDALEX CA                     N2 GROOVES BO
+INDALEX US                     N2 GROOVES BO
+EXTRA CHRG                     ALUDIE TOOL
+EXTRA CHRG                     BACK CLEARANCE
+EXTRA CHRG                     BRIDGE FEEDER
+EXTRA CHRG                     BUTTERFLY DESIGN
+EXTRA CHRG                     C ROUTE
+EXTRA CHRG                     CENTRE FEED DESIGN
+EXTRA CHRG                     CHOKE
+EXTRA CHRG                     COMPLEXITY 10%
+EXTRA CHRG                     COMPLEXITY 15%
+EXTRA CHRG                     COMPLEXITY 20%
+EXTRA CHRG                     COMPLEXITY 30%
+EXTRA CHRG                     D RUNG DIE
+EXTRA CHRG                     DOME DIES
+EXTRA CHRG                     EXTENDED FIXED MANDR
+EXTRA CHRG                     FAKE CORE 25%
+EXTRA CHRG                     HARDENED BLANK
+EXTRA CHRG                     HEAT SINK 100%
+EXTRA CHRG                     HEAT SINK 50%
+EXTRA CHRG                     INSERT FOR MANDREL
+EXTRA CHRG                     INSERT FOR PLATE
+EXTRA CHRG                     INSERTS - PER PIECE
+EXTRA CHRG                     MICRO BRIDGE
+EXTRA CHRG                     MULTI - MANDREL
+EXTRA CHRG                     NITRIDE - FLAT RATE
+NITRIDING                      NITRIDING
+EXTRA CHRG                     ONE PIECE DIE
+EXTRA CHRG                     PIN CORES
+EXTRA CHRG                     POCKET CHARGE
+EXTRA CHRG                     REPEAT DIE 2%
+EXTRA CHRG                     REPEAT DIE 3%
+EXTRA CHRG                     REPEAT DIE 5%
+EXTRA CHRG                     SEMI-HOLLOW
+EXTRA CHRG                     SHTOFF DIE NEW DVTL
+EXTRA CHRG                     SHUT OFF DIE - NORM
+EXTRA CHRG                     TRIPLE SKIM CUT
+EXTRA CHRG                     WIRE RELIEF
+EXTRA CHRG                     WIRE SUPPORT
+EXTRA CHRG                     ZERO BEARING
+EXTRA CHRG                     FAKE CORE
+EXTRA CHRG                     HARDENED BLANK N/C
+INDALEX CA                     BUTTERFLY DESIGN
+INDALEX US                     BUTTERFLY DESIGN
+INDALEX CA                     C ROUTE BEARING
+INDALEX US                     C ROUTE BEARING
+INDALEX CA                     CENTRE FEED DESIGN
+INDALEX US                     CENTRE FEED DESIGN
+INDALEX CA                     COMPLEXITY 10%
+INDALEX US                     COMPLEXITY 10%
+INDALEX CA                     COMPLEXITY 15%
+INDALEX US                     COMPLEXITY 15%
+INDALEX CA                     COMPLEXITY 20%
+INDALEX US                     COMPLEXITY 20%
+INDALEX CA                     COMPLEXITY 30%
+INDALEX US                     COMPLEXITY 30%
+INDALEX CA                     DOME DIES
+INDALEX US                     DOME DIES
+INDALEX CA                     EXTENDED FIXED MANDR
+INDALEX US                     EXTENDED FIXED MANDR
+INDALEX CA                     HARDENED BLANK
+INDALEX US                     HARDENED BLANK
+INDALEX CA                     HARDENED BLANK N/C
+INDALEX US                     HARDENED BLANK N/C
+INDALEX CA                     HEAT SINK 100%
+INDALEX US                     HEAT SINK 100%
+INDALEX CA                     HEAT SINK 50%
+INDALEX US                     HEAT SINK 50%
+INDALEX CA                     INSERTS
+INDALEX US                     INSERTS
+INDALEX CA                     INSERTS - PER PIECE
+INDALEX US                     INSERTS - PER PIECE
+INDALEX CA                     MICRO BRIDGE
+INDALEX US                     MICRO BRIDGE
+INDALEX CA                     MULTI - MANDREL
+INDALEX US                     MULTI - MANDREL
+INDALEX CA                     NITRIDE - FLAT RATE
+INDALEX US                     NITRIDE - FLAT RATE
+EXTRA CHRG                     NITRIDE - PLATE ONLY
+INDALEX CA                     NITRIDE - PLATE ONLY
+INDALEX US                     NITRIDE - PLATE ONLY
+INDALEX CA                     ONE PIECE-SH-FC
+INDALEX US                     ONE PIECE-SH-FC
+INDALEX CA                     PIN CORES
+INDALEX US                     PIN CORES
+INDALEX CA                     POCKETS
+INDALEX US                     POCKETS
+INDALEX CA                     SHTOFF DIE NEW DVTL
+INDALEX US                     SHTOFF DIE NEW DVTL
+INDALEX CA                     SHUT OFF DIE - NORM
+INDALEX US                     SHUT OFF DIE - NORM
+INDALEX CA                     STRAIGHT POCKETS
+INDALEX US                     STRAIGHT POCKETS
+INDALEX CA                     TAPERED POCKETS
+INDALEX US                     TAPERED POCKETS
+INDALEX CA                     TRIPLE POCKETS
+INDALEX US                     TRIPLE POCKETS
+INDALEX CA                     TRIPLE SKIM CUT
+INDALEX US                     TRIPLE SKIM CUT
+INDALEX CA                     WIRE RELIEF-CHOKE-NC
+INDALEX US                     WIRE RELIEF-CHOKE-NC
+INDALEX CA                     WIRE SUPPORT
+INDALEX US                     WIRE SUPPORT
+INDALEX CA                     ZERO BEARING
+INDALEX US                     ZERO BEARING
+EXTRA CHRG                     COOLING FINS
+INDALEX CA                     ALUDIE TOOL
+INDALEX US                     ALUDIE TOOL
+EXTRA CHRG                     POCKET CHARGE DB
+null                           null
+null                           null
+null                           null
+null                           null
+null                           null
+null                           null

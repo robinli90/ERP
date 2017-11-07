@@ -1,0 +1,12 @@
+4	Work Order does not exist for this specific part with that sales order nubmer
+S	Processed but no Start/Stop?
+2	Station number is not defined in stationMap.txt
+E	Unknown error in mapdecadedData
+5	Database Error trying to look up work order, seqNumber, Dept. 
+T	Processed but no Start/Stop?
+Y	Fully Processed (ingored in the future)
+3	Seqnumber Look up failed 
+N	Brand New records or not deal with (it will be looked later)
+6	Ignored this record not a real error
+I	Infomation Only Record Ignored.(does not apply to solarsoft seq number)	
+7	TaskMap lookup failed

@@ -1,0 +1,186 @@
+# BAAL Station mapping from Decade to Solarsoft
+#
+# lines starting with # are treated as comments and ignored. 
+#
+# This is a sample station map definition file used to translate Decade station
+# codes to resources within solarsoft. 
+#
+# There is a separate station map file for each of the plants so that they can 
+# be maintained independently. The DEPT code has the plant ID as a prefix. 
+# The plant ID prefix must be consistent throughout the entire file otherwise
+# unpredictable results will occur. 
+#
+#
+# There are 4 fields as follows:
+#   DECADE_STATION,CMS_DEVICEID,CMS_DEPT,CMS_RESOURCE
+#
+#  Device ID from   RDEV
+#  Deptartment from DEPTS
+#  Resource from    RESRE
+#
+#   The RCTF table links the data collection DEVICE to the RESOURCE and DEPARTMENT
+#   do PDMN65 opt 3, and then drill down into each entry to see the device association. 
+#
+# Note that these must also match up to the METHDR associations. 
+#
+# Dec 4, 2009 - Adding a new resource type of "*EMPL".  This indicates that the resource
+#               is to be mapped to the employee tag# 
+#
+
+# AutoCAD wire 
+ACDW,IGNORE,*,*
+
+# CAD Department
+DSCN,ELC,001CD,*EMPL
+
+# CAM Department
+CM01,ELC,001CM,*EMPL
+CM02,ELC,001CM,*EMPL
+CM03,ELC,001CM,*EMPL
+CM04,ELC,001CM,*EMPL
+CM05,ELC,001CM,*EMPL
+CM06,ELC,001CM,*EMPL
+CM07,ELC,001CM,*EMPL
+CM08,ELC,001CM,*EMPL
+CM09,ELC,001CM,*EMPL
+CM10,ELC,001CM,*EMPL
+
+# Saw Dept
+SAW1,SAW,001SW,AS1
+SAW2,SAW,001SW,AS2
+SAW3,SAW,001SW,AS3
+SAW5,SAW,001SW,AS5
+SAW6,SAW,001SW,AS6
+SAW8,SAW,001SW,AS8
+
+
+# Lathes
+LA01,ELC,001L1,L6
+LA02,ELC,001L1,L7
+LA03,ELC,001L1,L8
+LA04,ELC,001L1,L9
+LA05,ELC,001L1,L10
+LA06,ELC,001L1,L6
+LA07,ELC,001L1,L8
+LA08,ELC,001L1,L8
+LA09,ELC,001L1,L10
+LA10,ELC,001L1,L9
+LA11,ELC,001L1,L10
+LTHC,ELC,001L1,L8
+LPFIN,ELC,001L1,L10
+LR1,ELC,001L2,L7
+
+# NC Milling 
+MC1,ELC,001M1,MC1
+MC2,ELC,001M1,MC2
+MC3,ELC,001M1,Z4
+MC4,ELC,001M1,Z4
+MC5,ELC,001M1,Z4
+MC6,ELC,001M1,MC6
+MC7,ELC,001M1,MC7
+MC8,ELC,001M1,MC8
+MC9,ELC,001M1,MC9
+MC12,ELC,001M1,Z4
+MC13,ELC,001M1,Z4
+MC14,ELC,001M1,Z4
+MC15,ELC,001M1,Z4
+MC16,ELC,001M1,Z4
+MC17,ELC,001M1,Z4
+MC18,ELC,001M1,Z4
+MC19,ELC,001M1,Z4
+MC20,ELC,001M1,MC20
+MC21,ELC,001M1,MC21
+MC22,ELC,001M2,MC22
+MC23,ELC,001M2,MC23
+MG22,ELC,001M2,MC22
+MG23,ELC,001M2,MC23
+CG22,ELC,001M2,MC22
+CG23,ELC,001M2,MC23
+MC24,ELC,001M2,MC24
+MC25,ELC,001M1,KIT1
+MC26,ELC,001M1,KIT2
+NK*,ELC,001M1,MCNK
+NL*,ELC,001M1,MCNL
+NM*,ELC,001M1,MCNM
+NN*,ELC,001M1,MCNN
+NP*,ELC,001M1,MCNP
+ZPS2,ELC,001M1,Z2
+# The following are Accaramatic which are ignore for now
+MC10,IGNORE,001M1,MC10
+MC11,IGNORE,001M1,MC11
+MFCK,IGNORE,*,*
+MBCK,IGNORE,*,* 
+PFCK,IGNORE,*,*
+PBCK,IGNORE,*,* 
+Z1,IGNORE,001M1,Z1   
+Z2,IGNORE,001M1,Z2   
+Z3,IGNORE,001M1,Z3
+Z4,IGNORE,001M1,Z4
+
+# Manual milling. 
+MMIL,ELC,001MM,MM1 
+
+# Dumore 
+DMOR,ELC,001DU,EMPL
+
+# Drill and Stamp
+DS,ELC,001DS,DP4
+DS3,ELC,001DS,DP3
+
+
+# Flame Cutter
+FLM1,ELC,001FC,FC1
+
+# Sinker/Ram type EDM
+SP1,ELC,001ED,S1
+SP2,ELC,001ED,S2
+SP3,ELC,001ED,S3  
+SP4,ELC,001ED,S4  
+SP5,ELC,001ED,S5  
+SP6,ELC,001ED,S6  
+SPKC,ELC,001ED,S1
+
+# Heat Treat
+# Here we need wild card mapping since the heat treat data on the decade 
+# side includes the oven number, steel type, and the rack number. 
+H0*,ELC,001HT,FB1
+H1*,ELC,001HT,FB2
+H2*,ELC,001HT,FB3
+H3*,ELC,001HT,CY6
+H4*,ELC,001HT,CY6
+H5*,ELC,001HT,CY6
+H6*,ELC,001HT,CY6
+H7*,ELC,001HT,CY6
+H8*,ELC,001HT,CY6
+H9*,ELC,001HT,CY6
+
+# SAND BLASTING
+SB,ELC,001HT,F10
+SB1,ELC,001HT,EMPL
+
+# Wire EDM
+F1,ELC,001WI,WE1
+F2,ELC,001WI,WE2
+F3,ELC,001WI,WE3
+F4,ELC,001WI,WE4
+F5,ELC,001WI,WE5
+F6,ELC,001WI,WE6
+F7,ELC,001WI,WE7
+F8,ELC,001WI,WE8
+F9,ELC,001WI,WE9
+F10,ELC,001WI,WE10
+F11,ELC,001WI,WE11
+F12,ELC,001WI,WE12
+F13,ELC,001WI,WE13
+F14,ELC,001WI,WE14
+F15,ELC,001WI,WE15
+B9,ELC,001WI,WB9
+B10,ELC,001WI,WB10  
+WOUT,ELC,001WI,WE1
+
+# Assembly
+ASS,ELC,001AS,EMPL
+
+# Inspection
+INSP,ELC,001IN,*EMPL
+NTRD,ELC,001NI,N1

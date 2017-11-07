@@ -1,0 +1,247 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\CADupdate.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\CADupdate.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CADUPDATE_DIALOG DIALOGEX 0, 0, 431, 303
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Solarsoft Job Order Update V1.2"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "SAVE",IDOK,87,270,50,16
+    PUSHBUTTON      "Cancel",IDCANCEL,151,270,50,16
+    PUSHBUTTON      "&Help",ID_HELP,211,270,50,16
+    CONTROL         "FEEDER",IDC_FDR_CHK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,100,41,10
+    EDITTEXT        IDC_FDRDIA_EDIT,125,98,53,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FDRTHK_EDIT,191,98,53,13,ES_AUTOHSCROLL
+    COMBOBOX        IDC_FDRSTEEL_COMBO,255,98,48,62,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "DIA (in)",IDC_STATIC,137,88,29,8
+    LTEXT           "Thickness (mm)",IDC_STATIC,194,88,51,8
+    LTEXT           "Steel",IDC_STATIC,263,88,23,8
+    LTEXT           "Features And Options",IDC_STATIC,324,88,74,8
+    CONTROL         "MANDREL",IDC_MND_CHK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,124,47,10
+    EDITTEXT        IDC_MNDDIA_EDIT,125,124,53,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MNDTHK_EDIT,191,124,53,13,ES_AUTOHSCROLL
+    COMBOBOX        IDC_MNDSTEEL_COMBO,255,124,48,65,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "PLATE",IDC_PLT_CHK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,151,36,10
+    EDITTEXT        IDC_PLTDIA_EDIT,125,150,53,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PLTTHK_EDIT,191,150,53,13,ES_AUTOHSCROLL
+    COMBOBOX        IDC_PLTSTEEL_COMBO,255,150,48,62,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "BACKER",IDC_BKR_CHK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,176,42,10
+    EDITTEXT        IDC_BKRDIA_EDIT,125,175,53,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BKRTHK_EDIT,191,175,53,13,ES_AUTOHSCROLL
+    COMBOBOX        IDC_BKRSTEEL_COMBO,255,175,48,56,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "BOLSTER",IDC_BOL_CHK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,201,45,10
+    EDITTEXT        IDC_BOLDIA_EDIT,125,200,53,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BOLTHK_EDIT,191,200,53,13,ES_AUTOHSCROLL
+    COMBOBOX        IDC_BOLSTEEL_COMBO,255,200,48,55,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "SUB-BLSTR",IDC_SUB_CHK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,226,50,10
+    EDITTEXT        IDC_SUBDIA_EDIT,125,225,53,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SUBTHK_EDIT,191,225,53,13,ES_AUTOHSCROLL
+    COMBOBOX        IDC_SUBSTEEL_COMBO,255,225,48,59,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "DIE RING",IDC_RNG_CHK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,252,46,10
+    EDITTEXT        IDC_RNGDIA_EDIT,125,250,53,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RNGTHK_EDIT,191,250,53,13,ES_AUTOHSCROLL
+    COMBOBOX        IDC_RNGSTEEL_COMBO,255,250,48,53,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_SONUM_EDIT,43,12,80,13,ES_AUTOHSCROLL
+    LTEXT           "Order#",IDC_STATIC,16,15,28,10
+    EDITTEXT        IDC_ORDERDETAILS_EDIT,130,13,263,68,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY
+    EDITTEXT        IDC_ORDERDATE_EDIT,52,31,72,13,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_REQDATE_EDIT,52,51,72,13,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Order Date",IDC_STATIC,10,32,41,10
+    LTEXT           "Req'd Date",IDC_STATIC,11,52,35,10
+    EDITTEXT        IDC_NCAVS_EDIT,40,68,26,13,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "# Cavs",IDC_STATIC,11,71,23,10
+    DEFPUSHBUTTON   "DEFBUTTON",IDC_DEF_BUTTON,16,276,55,13,NOT WS_VISIBLE
+    CONTROL         "Check1",IDC_FDRORIG_CHK,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,10,100,10,9
+    CONTROL         "Check1",IDC_MNDORIG_CHK,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,10,124,10,9
+    CONTROL         "Check1",IDC_PLTORIG_CHK,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,10,151,10,9
+    CONTROL         "Check1",IDC_BKRORIG_CHK,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,10,176,10,9
+    CONTROL         "Check1",IDC_BOLORIG_CHK,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,10,201,10,9
+    CONTROL         "Check1",IDC_SUBORIG_CHK,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,10,225,10,9
+    CONTROL         "Check1",IDC_RNGORIG_CHK,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,10,252,10,9
+    CONTROL         "Check1",IDC_CHECK8,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,10,201,10,9
+    CONTROL         "Check1",IDC_CHECK9,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,10,225,10,9
+    CONTROL         "Check1",IDC_CHECK10,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,10,252,10,9
+    LISTBOX         IDC_OPS_LIST,311,99,115,164,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_FROM_EDIT,273,271,59,15,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_TO_EDIT,367,270,59,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    CONTROL         "",IDC_FDRBLANK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,100,9,8
+    CONTROL         "",IDC_FDRHARD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,105,100,9,8
+    CONTROL         "",IDC_MNDBLANK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,124,9,8
+    CONTROL         "",IDC_MNDHARD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,105,124,9,8
+    CONTROL         "",IDC_PLTBLANK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,151,9,8
+    CONTROL         "",IDC_PLTHARD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,105,151,9,8
+    CONTROL         "",IDC_BKRBLANK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,176,9,8
+    CONTROL         "",IDC_BKRHARD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,105,176,9,8
+    CONTROL         "",IDC_BOLBLANK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,201,9,8
+    CONTROL         "",IDC_BOLHARD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,105,201,9,8
+    CONTROL         "",IDC_SBLBLANK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,226,9,8
+    CONTROL         "",IDC_SBLHARD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,105,226,9,8
+    CONTROL         "",IDC_RNGBLANK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,252,9,8
+    CONTROL         "",IDC_HDRHARD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,105,252,9,8
+    LTEXT           "TB",IDC_STATIC,80,88,9,8
+    LTEXT           "HB",IDC_STATIC,105,88,9,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "CADupdate.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "CADupdate.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_CADUPDATE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 426
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 295
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "&About CADupdate..."
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\CADupdate.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

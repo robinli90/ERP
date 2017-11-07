@@ -1,0 +1,42 @@
+tskfile -kTT  {-sNNNNN -pPP [-xEXT] | -SJJNNNNN[ext] | -WJJNNNNN[ext] |
+          -LNNNNNJJ} -aSCOD -eEMPCODE -dOUTDIR -tTMSRVR -Tformat
+
+   The parameters are as follows:
+   -k Is the 2 character task code for that particular station
+   -i the X=I represents a login op, O=logout, B=simultaneous login/out
+   -s and -p must occur together or -S (or -T) alone must appear. If -s and -p
+      then the s parameter is the shop order number (digits only) and the -p is
+      the part designator 2 character code. The -S parameter is intended for
+      use when jobs are downloaded to NC machines and the file name (MF12345
+      for example) determines the part code automatically. In the case of the
+      -S parameter the part code will be automatically generated based on the
+      two letters in the file name. Also an extension string can appear on the
+      end of the string which gets split off into a separate parameter.
+   -L lathe mode part mapping, shop order before part code.
+      (for lathe jobs)
+   -W wire mode part mapping, the taskcode will be set to WE, to override the
+      WE taskcode, make sure the -k parameter appears after the -W parameter
+      Note: for chike, relief, electrode, and gauge types, no override is
+      is possible, thus the -k parameter will have no effect
+   -a is a 4 character station code. This is used to distinguish what piece
+      of shop hardware the job is being run on (ZPS1, ZPS2, ... for example)
+   -e is the employee code
+   -d is the output directory where the one line file will be written
+      do not include a trailing \ on the output directory string
+   -t is the name of the server where the time will be retrieved from
+      The leading \\ will automatically be put in front of the name.
+   -T is the expected format of the date and time, from the time server
+        where  1=YMD 2=MDY 3=DMY.
+  The format of the line output looks like this:
+      TASK|SONUM|EMPNUM|TKPC|MM/DD/YYYY|SCOD
+    where SCOD is the station code, X is the log in/out type, PC=part code
+    and TK=task code
+    the TKPC must be a 4 character string.
+
+
+bcode32 -kSI -s75600 -pGL  -aGSCN -e10165 -twinsrvr -dc:\prj\decade\inout\tasks
+bcode32 -kSX -s75600 -pGL  -aSSCN -e10165 -twinsrvr -dc:\prj\decade\inout\tasks
+bcode32 -kDD -s75600 -pGL  -aCSCN -e10165 -twinsrvr -dc:\prj\decade\inout\tasks
+bcode32 -kCI -s75600 -pGL  -aCSCN -e10165 -twinsrvr -dc:\prj\decade\inout\tasks
+bcode32 -kCO -s75600 -pGL  -aCSCN -e10165 -twinsrvr -dc:\prj\decade\inout\tasks
+

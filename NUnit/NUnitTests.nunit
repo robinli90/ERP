@@ -1,0 +1,6 @@
+﻿<NUnitProject>
+  <Settings activeconfig="Debug" autoconfig="true" />
+  <Config name="Debug" binpath="lib;framework">
+    <assembly path="..\ExcoDB\bin\Debug\ExcoDB.dll" />
+  </Config>
+</NUnitProject>

@@ -1,0 +1,1 @@
+copy *.rpt \\10.0.0.6\shopdata\development\tiger\report\ /y
