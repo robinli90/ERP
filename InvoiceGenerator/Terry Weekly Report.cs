@@ -165,7 +165,10 @@ namespace InvoiceGenerator
             }
 
             Search_Days = Get_Work_Days(from_Date, to_Date);
-            YTD_Workdays = Get_Work_Days(new DateTime(Convert.ToInt32(from_year.Text) - 1, 10, 1), to_Date); // start of fiscal to now
+
+            int refYear = Convert.ToInt32(from_year.Text);
+
+            YTD_Workdays = Get_Work_Days(new DateTime(refYear < 10 ? refYear - 1 : refYear, 10, 1), to_Date); // start of fiscal to now
 
 
             #region Get master accounts
@@ -230,18 +233,21 @@ namespace InvoiceGenerator
             reader.Close();
             #endregion
             
-            int budgetMonth = Convert.ToInt32(from_month.Text);
+            int budgetMonth = Convert.ToInt32(from_month.Text) + 1;
+
+            if (budgetMonth > 12) budgetMonth = 1;
+
             int budgetFromYear = Convert.ToInt32(from_year.Text) + (budgetMonth >= 10 ? 0 : -1);
-            int budgetToYear = budgetFromYear + 1;
+            int budgetToYear = Convert.ToInt32(from_year.Text);
 
             #region Get YTD totals
             foreach (Customer cc in Cust_List)
             {
                 query = "select d_customer.customercode, d_customer.name, count(d_customer.customercode) as count1, sum(sales+nitride+steelsurcharge-discountamount) as " +
-                        "sales,territory from d_order, d_customer where orderdate >= '10/1/" + budgetFromYear + " 12:00 AM' and orderdate < '10/1/" + budgetToYear + " 12:00 AM' and hasnitridecomputedline = 0 and d_order.customercode = " +
+                        "sales,territory from d_order, d_customer where orderdate >= '10/1/" + budgetFromYear + " 12:00 AM' and orderdate < '" + budgetMonth + "/1/" + budgetToYear + " 12:00 AM' and hasnitridecomputedline = 0 and d_order.customercode = " +
                         "'" + cc.Code + "' and d_customer.customercode = '" + cc.Code + "' group by d_customer.customercode, d_customer.name, territory UNION select d_customer.customercode, d_customer.name, " +
                         "count(d_customer.customercode) as count1, sum(sales+steelsurcharge-discountamount) as sales,territory from d_order, d_customer where " +
-                        "orderdate >= '10/1/" + budgetFromYear + " 12:00 AM' and orderdate < '10/1/" + budgetToYear + " 12:00 AM' and hasnitridecomputedline = 1 and d_order.customercode = '" + cc.Code + "' " +
+                        "orderdate >= '10/1/" + budgetFromYear + " 12:00 AM' and orderdate < '" + budgetMonth + "/1/" + budgetToYear + " 12:00 AM' and hasnitridecomputedline = 1 and d_order.customercode = '" + cc.Code + "' " +
                         "and d_customer.customercode = '" + cc.Code + "' group by d_customer.customercode, d_customer.name, territory ";
 
                 instance.Open(masterDB);
@@ -386,30 +392,47 @@ namespace InvoiceGenerator
                 double yr = Get_Work_Days_In_Year();
                 double refractor_amt_yr = YTD_Workdays / yr;
 
+                //refractor_amt_yr = 1;
+
                 col = 1;
+                //row 1
                 sheet.Cells[row, col++] = c.Code + "  " + c.Name;
+                //row 2
                 sheet.Cells[row, col++] = c.Count;
-                row_totals[col] += c.Count;
+                    row_totals[col] += c.Count;
+                //row 3 - mtd total
                 sheet.Cells[row, col++] = "$" + String.Format("{0:0.00}", c.Sales);
-                row_totals[col] += c.Sales;
+                    row_totals[col] += c.Sales;
+                //row 4 - mtd budget
                 sheet.Cells[row, col++] = "$" + String.Format("{0:0.00}", (c.Get_Budget_For_Month(Convert.ToInt32(from_month.Text)) * refractor_amt));
-                row_totals[col] += (c.Get_Budget_For_Month(Convert.ToInt32(from_month.Text)) * refractor_amt);
+                    row_totals[col] += (c.Get_Budget_For_Month(Convert.ToInt32(from_month.Text)) * refractor_amt);
+                //row 5 - #days
                 sheet.Cells[row, col++] = Search_Days;
+                //row 6 - last year same period
                 sheet.Cells[row, col++] = "$" + String.Format("{0:0.00}", c.LastYearSales);
-                row_totals[col] += c.LastYearSales;
+                    row_totals[col] += c.LastYearSales;
+                //row 7 - mtd diff
                 sheet.Cells[row, col++] = "$" + String.Format("{0:0.00}", c.Sales - (c.Get_Budget_For_Month(Convert.ToInt32(from_month.Text)) * refractor_amt));
-                row_totals[col] += c.Sales - (c.Get_Budget_For_Month(Convert.ToInt32(from_month.Text)) * refractor_amt);
+                    row_totals[col] += c.Sales - (c.Get_Budget_For_Month(Convert.ToInt32(from_month.Text)) * refractor_amt);
+                //row 8 - month budget
                 sheet.Cells[row, col++] = "$" + String.Format("{0:0.00}", (c.Get_Budget_For_Month(Convert.ToInt32(from_month.Text))));
-                row_totals[col] += c.Get_Budget_For_Month(Convert.ToInt32(from_month.Text));
+                    row_totals[col] += c.Get_Budget_For_Month(Convert.ToInt32(from_month.Text));
+                //row 9 - ytd total
                 sheet.Cells[row, col++] = "$" + String.Format("{0:0.00}", (c.YTD_Sales));
-                row_totals[col] += c.YTD_Sales;
-                sheet.Cells[row, col++] = "$" + String.Format("{0:0.00}", (c.Get_Budget_Total(true, Convert.ToInt32(from_month.Text)) * refractor_amt_yr));
-                row_totals[col] += c.Get_Budget_Total(true, Convert.ToInt32(from_month.Text)) * refractor_amt_yr;
-                sheet.Cells[row, col++] = "$" + String.Format("{0:0.00}", (c.YTD_Sales) - (c.Get_Budget_Total(true, Convert.ToInt32(from_month.Text)) * refractor_amt_yr));
-                row_totals[col] += (c.YTD_Sales) - (c.Get_Budget_Total(true, Convert.ToInt32(from_month.Text)) * refractor_amt_yr);
+                    row_totals[col] += c.YTD_Sales;
+                //row 10 - ytd budget
+                sheet.Cells[row, col++] = "$" + String.Format("{0:0.00}", (c.Get_Budget_Total(false, Convert.ToInt32(from_month.Text)) * refractor_amt_yr));
+                    row_totals[col] += c.Get_Budget_Total(false, Convert.ToInt32(from_month.Text)) * refractor_amt_yr;
+                //row 11 - ytd diff
+                sheet.Cells[row, col++] = "$" + String.Format("{0:0.00}", (c.YTD_Sales) - (c.Get_Budget_Total(false, Convert.ToInt32(from_month.Text)) * refractor_amt_yr));
+                    row_totals[col] += (c.YTD_Sales) - (c.Get_Budget_Total(false, Convert.ToInt32(from_month.Text)) * refractor_amt_yr);
+                //row 12 - year budget
                 sheet.Cells[row, col++] = "$" + String.Format("{0:0.00}", c.Get_Budget_Total());
-                row_totals[col] += c.Get_Budget_Total();
+                    row_totals[col] += c.Get_Budget_Total();
+                //row 13 - currency
                 sheet.Cells[row, col++] = c.Currency;
+
+
                 //sheet.Cells[row, 12] = c.Territory;
 
                 if (c.Sales < (c.Get_Budget_For_Month(Convert.ToInt32(from_month.Text)) * refractor_amt)) sheet.Cells.get_Range("C" + row.ToString()).Interior.Color = Color.LightPink;
