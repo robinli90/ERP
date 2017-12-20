@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ArchiveUploader));
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.addSolidButton = new System.Windows.Forms.Button();
+            this.addFilesButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.close_button = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -46,17 +46,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.custNum = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dieNum = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label6.Location = new System.Drawing.Point(240, 83);
+            this.label6.Location = new System.Drawing.Point(240, 114);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 12);
             this.label6.TabIndex = 258;
@@ -64,32 +68,30 @@
             // 
             // label7
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label7.Location = new System.Drawing.Point(242, 73);
+            this.label7.Location = new System.Drawing.Point(242, 104);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(26, 12);
             this.label7.TabIndex = 257;
             this.label7.Text = "ADD";
             // 
-            // addSolidButton
+            // addFilesButton
             // 
-            this.addSolidButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.addSolidButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.addSolidButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addSolidButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addSolidButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.addSolidButton.Image = ((System.Drawing.Image)(resources.GetObject("addSolidButton.Image")));
-            this.addSolidButton.Location = new System.Drawing.Point(234, 33);
-            this.addSolidButton.Margin = new System.Windows.Forms.Padding(1);
-            this.addSolidButton.Name = "addSolidButton";
-            this.addSolidButton.Size = new System.Drawing.Size(40, 40);
-            this.addSolidButton.TabIndex = 256;
-            this.addSolidButton.UseVisualStyleBackColor = true;
-            this.addSolidButton.Click += new System.EventHandler(this.addSolidButton_Click);
+            this.addFilesButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.addFilesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addFilesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addFilesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.addFilesButton.Image = ((System.Drawing.Image)(resources.GetObject("addFilesButton.Image")));
+            this.addFilesButton.Location = new System.Drawing.Point(234, 64);
+            this.addFilesButton.Margin = new System.Windows.Forms.Padding(1);
+            this.addFilesButton.Name = "addFilesButton";
+            this.addFilesButton.Size = new System.Drawing.Size(40, 40);
+            this.addFilesButton.TabIndex = 256;
+            this.addFilesButton.UseVisualStyleBackColor = true;
+            this.addFilesButton.Click += new System.EventHandler(this.addFileButton_Click);
             // 
             // pictureBox1
             // 
@@ -118,6 +120,7 @@
             this.close_button.TabIndex = 248;
             this.close_button.Text = "X";
             this.close_button.UseVisualStyleBackColor = false;
+            this.close_button.Click += new System.EventHandler(this.close_button_Click);
             // 
             // textBox3
             // 
@@ -139,7 +142,7 @@
             this.textBox4.BackColor = System.Drawing.SystemColors.HotTrack;
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(-129, 166);
+            this.textBox4.Location = new System.Drawing.Point(-129, 197);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(1426, 12);
@@ -166,7 +169,7 @@
             this.textBox1.Location = new System.Drawing.Point(288, -2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(32, 1850);
+            this.textBox1.Size = new System.Drawing.Size(32, 1881);
             this.textBox1.TabIndex = 244;
             // 
             // label5
@@ -203,8 +206,9 @@
             this.orderNum.Location = new System.Drawing.Point(111, 81);
             this.orderNum.MaxLength = 6;
             this.orderNum.Name = "orderNum";
-            this.orderNum.Size = new System.Drawing.Size(69, 22);
+            this.orderNum.Size = new System.Drawing.Size(97, 22);
             this.orderNum.TabIndex = 282;
+            this.orderNum.TextChanged += new System.EventHandler(this.orderNum_TextChanged);
             // 
             // label4
             // 
@@ -250,7 +254,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(234, 106);
+            this.button1.Location = new System.Drawing.Point(234, 137);
             this.button1.Margin = new System.Windows.Forms.Padding(1);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(40, 40);
@@ -265,18 +269,89 @@
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label8.Location = new System.Drawing.Point(234, 146);
+            this.label8.Location = new System.Drawing.Point(234, 177);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 12);
             this.label8.TabIndex = 287;
             this.label8.Text = "UPLOAD";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.checkBox1.Location = new System.Drawing.Point(21, 110);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(107, 17);
+            this.checkBox1.TabIndex = 288;
+            this.checkBox1.Text = "Design scan file?";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // custNum
+            // 
+            this.custNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.custNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.custNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.custNum.ForeColor = System.Drawing.Color.White;
+            this.custNum.Location = new System.Drawing.Point(111, 133);
+            this.custNum.MaxLength = 6;
+            this.custNum.Name = "custNum";
+            this.custNum.Size = new System.Drawing.Size(97, 22);
+            this.custNum.TabIndex = 289;
+            this.custNum.Visible = false;
+            this.custNum.TextChanged += new System.EventHandler(this.custNum_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(30, 135);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 16);
+            this.label3.TabIndex = 290;
+            this.label3.Text = "Customer #";
+            this.label3.Visible = false;
+            // 
+            // dieNum
+            // 
+            this.dieNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.dieNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dieNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dieNum.ForeColor = System.Drawing.Color.White;
+            this.dieNum.Location = new System.Drawing.Point(111, 161);
+            this.dieNum.MaxLength = 15;
+            this.dieNum.Name = "dieNum";
+            this.dieNum.Size = new System.Drawing.Size(97, 22);
+            this.dieNum.TabIndex = 291;
+            this.dieNum.Visible = false;
+            this.dieNum.TextChanged += new System.EventHandler(this.dieNum_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.Control;
+            this.label9.Location = new System.Drawing.Point(66, 163);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(39, 16);
+            this.label9.TabIndex = 292;
+            this.label9.Text = "Die #";
+            this.label9.Visible = false;
             // 
             // ArchiveUploader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(289, 167);
+            this.ClientSize = new System.Drawing.Size(289, 198);
+            this.Controls.Add(this.dieNum);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.custNum);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
@@ -285,7 +360,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.addSolidButton);
+            this.Controls.Add(this.addFilesButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.close_button);
             this.Controls.Add(this.textBox3);
@@ -308,7 +383,7 @@
         #endregion
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button addSolidButton;
+        private System.Windows.Forms.Button addFilesButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button close_button;
         private System.Windows.Forms.TextBox textBox3;
@@ -323,6 +398,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.CheckBox checkBox1;
+        public System.Windows.Forms.TextBox custNum;
+        private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.TextBox dieNum;
+        private System.Windows.Forms.Label label9;
     }
 }
 

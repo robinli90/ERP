@@ -748,7 +748,7 @@ namespace SendEmail
                     File.Delete(temp_zip_file);
             }
 
-            // cReatE DIRECTOry here
+            // Create Directory here
             Directory.CreateDirectory(temp_file_directory);
             //Directory.CreateDirectory(temp_zip_file);
 

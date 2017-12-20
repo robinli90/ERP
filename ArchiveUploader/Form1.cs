@@ -15,6 +15,8 @@ namespace ArchiveUploader
 {
     public partial class ArchiveUploader : Form
     {
+        private string designScanPath = @"\\10.0.0.8\ndrive\";
+
         List<Button> Delete_Item_Buttons = new List<Button>();
         int Initializing_Height = 0;
 
@@ -44,15 +46,13 @@ namespace ArchiveUploader
         protected override void OnPaint(PaintEventArgs e)
         {
 
-            Console.WriteLine("painting...");
-
             Delete_Item_Buttons.ForEach(button => button.Image.Dispose());
             Delete_Item_Buttons.ForEach(button => button.Dispose());
             Delete_Item_Buttons.ForEach(button => this.Controls.Remove(button));
             Delete_Item_Buttons = new List<Button>();
 
             int data_height = 20;
-            int start_height = orderNum.Height + orderNum.Top + 15;
+            int start_height = dieNum.Height + (checkBox1.Checked ? dieNum.Top : checkBox1.Top + 15) + 10;
             int start_margin = 5;   
             int height_offset = 0;
             int row_count = 0;
@@ -78,23 +78,24 @@ namespace ArchiveUploader
                     delete_button.FlatStyle = FlatStyle.Flat;
                     delete_button.Image = global::ArchiveUploader.Properties.Resources.del;
                     delete_button.Size = new Size(21, 21);
-                    delete_button.Location = new Point(start_margin, start_height + height_offset + (row_count * data_height) - 2);
-                    delete_button.Name = "del" + count;
+                    delete_button.Location = new Point(start_margin + 10, start_height + height_offset + (row_count * data_height) - 2);
+                    delete_button.Name = "del" + count++;
                     delete_button.Text = "";
                     delete_button.Click += new EventHandler(this.dynamic_button_click);
                     Delete_Item_Buttons.Add(delete_button);
                     Controls.Add(delete_button);
 
-                    e.Graphics.DrawString(GetFileName(filePath), f_small, WritingBrush, start_margin + 20, start_height + height_offset + (row_count * data_height));
+                    e.Graphics.DrawString(GetFileName(filePath), f_small, WritingBrush, start_margin + 30, start_height + height_offset + (row_count * data_height));
                     row_count++;
                 }
             }
             else
             {
-                e.Graphics.DrawString("No files to upload", f_italic, WritingBrush, start_margin + 30, start_height + height_offset + (row_count * data_height));
+                e.Graphics.DrawString("No files to upload...", f_italic, WritingBrush, start_margin + 30, start_height + height_offset + (row_count * data_height));
             }
 
-            row_count = row_count > 3 ? row_count - 3 : 0;
+            if (!checkBox1.Checked)
+                row_count = row_count > 3 ? row_count - 3 : 0;
 
             // Adjust new height
             this.Height = Initializing_Height + height_offset + (++row_count) * data_height;// +QL_Height_Factor;
@@ -130,7 +131,7 @@ namespace ArchiveUploader
             this.AutoScaleMode = AutoScaleMode.Font;
             InitializeComponent();
             this.DoubleBuffered = true;
-            this.SetStyle(ControlStyles.ResizeRedraw, true);
+            this.SetStyle(ControlStyles.ResizeRedraw, true);    
         }
 
         public string GetFileName(string filePath)
@@ -171,17 +172,23 @@ namespace ArchiveUploader
         }
 
         // Add files
-        private void addSolidButton_Click(object sender, EventArgs e)
+        private void addFileButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog file = new OpenFileDialog();
             file.Title = "Upload File(s)";
-            file.Multiselect = true;
+            file.Multiselect = !checkBox1.Checked;
             if (file.ShowDialog() == DialogResult.OK)
             {
+                if (checkBox1.Checked && FileList.Count > 0)
+                {
+                    FileList = new List<string>();
+                    MessageBox.Show("Original file(s) have been removed");
+                }
+
                 foreach (string filename in file.FileNames)
                 {
                     UploadFile(filename);
-                }
+                }   
 
             }
             Refresh();
@@ -194,6 +201,31 @@ namespace ArchiveUploader
                 orderNum.Text.Length == 6 && 
                 orderNum.Text.All(x => char.IsDigit(x)))
             {
+
+                // Only one file to be copied for design copy
+                if (checkBox1.Checked && FileList.Count == 1)
+                {
+                    if (custNum.Text.Trim().Length <= 0)
+                    {
+                        MessageBox.Show("Missing customer number");
+                        custNum.BackColor = Color.Maroon;
+                        return;
+                    }
+                    if (dieNum.Text.Trim().Length <= 0)
+                    {
+                        MessageBox.Show("Missing die number");
+                        dieNum.BackColor = Color.Maroon;
+                        return;
+                    }
+                    // Try to copy to ndrive, if error, warn and do not continue
+                    if (!CopyToNDrive(FileList[0], custNum.Text.Trim(), dieNum.Text.Trim(), orderNum.Text))
+                    {
+                        MessageBox.Show(String.Format("Customer '{0}' does not exist", custNum.Text.Trim()));
+                        custNum.BackColor = Color.Maroon;
+                        return;
+                    }
+                }
+
                 string archivePath = Path.Combine(@"\\10.0.0.8\cache\", orderNum.Text);
 
                 if (!Directory.Exists(archivePath))
@@ -201,17 +233,142 @@ namespace ArchiveUploader
 
                 foreach (var file in FileList)
                 {
-                    // Copy file
-                    File.Copy(file, Path.Combine(archivePath, Path.GetFileName(file)), true);
+                    // Copy file if exists (could be deleted in the interim)
+                    if (File.Exists(file))
+                    {
+                        File.Copy(file, Path.Combine(archivePath, Path.GetFileName(file)), true);
+                    }
                 }
 
+                Append(String.Format("    {2} Files uploaded to archive from {0}/{1} to SO:{3} {4}", Environment.MachineName, Environment.UserName, FileList.Count, orderNum.Text, 
+                    (checkBox1.Checked ? String.Format("(Cust:{0}, DieNo:{1})", custNum.Text, dieNum.Text) : "")
+                    ));
+
                 FileList = new List<string>();
+                custNum.Text = dieNum.Text = orderNum.Text = "";
                 Refresh();
+
+
+                MessageBox.Show("Upload successful!");
             }
-            else
+            else if (orderNum.Text.Trim().Length <= 0 || !orderNum.Text.All(x => char.IsDigit(x)))
             {
                 orderNum.BackColor = Color.Maroon;
             }
+            else
+            {
+                MessageBox.Show("No files uploaded");
+            }
+        }
+
+        private bool CopyToNDrive(string sourceFilePath, string custNo, string dieNo, string orderNo)
+        {
+            string custPath = Path.Combine(designScanPath, custNo);
+            string diePath = Path.Combine(custPath, dieNo);
+
+            // Return false if customer does not exist 
+            if (!Directory.Exists(custPath)) return false;
+
+            // Create path for die if it does not exist
+            if (!Directory.Exists(diePath))
+                Directory.CreateDirectory(diePath);
+
+            string filePath = Path.Combine(diePath,
+                String.Format("{0}_{1}_{2}-{3}-{4}", dieNo, orderNo, DateTime.Now.Year, DateTime.Now.Month,
+                    DateTime.Now.Day));
+
+            int pathAppend = 0;
+
+            while (File.Exists(filePath + (pathAppend > 0 ? "" : pathAppend.ToString())))
+            {
+                pathAppend++;
+            }
+
+            // Copy file to ndrive and append digit if more than one file
+            File.Copy(sourceFilePath, filePath + 
+                (pathAppend > 0 ? pathAppend.ToString() : "") + 
+                Path.GetExtension(sourceFilePath),
+                true // not necessarily required but in case?
+                );
+
+            return true;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (FileList.Count > 1)
+            { 
+                MessageBox.Show(
+                    "You have more than 1 file added. You can only upload a single file per instance when uploading design files. All files have been removed");
+                FileList = new List<string>();
+                Refresh();
+            }
+
+            label3.Visible = label9.Visible = checkBox1.Checked;
+            dieNum.Visible = custNum.Visible = checkBox1.Checked;
+
+            Refresh();
+        }
+
+        private void orderNum_TextChanged(object sender, EventArgs e)
+        {
+            orderNum.BackColor = Color.FromArgb(72, 72, 72);
+        }
+
+        private void dieNum_TextChanged(object sender, EventArgs e)
+        {
+            dieNum.BackColor = Color.FromArgb(72, 72, 72);
+        }
+
+        private void custNum_TextChanged(object sender, EventArgs e)
+        {
+            custNum.BackColor = Color.FromArgb(72, 72, 72);
+        }
+
+        public static readonly string logFilePath = @"\\10.0.0.8\EmailAPI\log.txt";
+
+
+        public static void Append(string logText)
+        {
+            logText = String.Format("[{3}-{0}:{1}:{2}] - {5} - {4}", DateTime.Now.Hour.ToString("D2"),
+                DateTime.Now.Minute.ToString("D2"),
+                DateTime.Now.Second.ToString("D2"), DateTime.Now.Date.ToShortDateString(), logText,
+                //GetSessionEmail());
+                Environment.MachineName);
+
+            while (true)
+            {
+                try
+                {
+                    AppendLine(logText + Environment.NewLine);
+                    return;
+                }
+                catch
+                {
+                    // File in use, try again
+                }
+            }
+        }
+
+        public static void AppendLine(string line)
+        {
+            while (true)
+            {
+                try
+                {
+                    File.AppendAllText(logFilePath, line);
+                    return;
+                }
+                catch
+                {
+                    // File in use, try again
+                }
+            }
+        }
+
+        private void close_button_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
